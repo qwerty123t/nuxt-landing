@@ -78,7 +78,7 @@
 <style scoped lang="scss">
     section {
         display: flex;
-
+        flex-direction: column;
         .text {
         width: 50%;
         }
