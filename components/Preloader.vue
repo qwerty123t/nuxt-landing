@@ -8,8 +8,14 @@
   import rocket from '@/assets/images/preloader.png';
 </script>
 
-<style scoped>
-img {
-  width: 10vw;
-}
+<style scoped lang="scss">
+
+  div {
+
+    img {
+
+      width: 10vw;
+    }
+  }
+
 </style>
