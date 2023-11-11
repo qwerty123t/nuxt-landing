@@ -1,25 +1,25 @@
 <template>
-    <div>
-      <!-- ваш код компонента -->
-      <h1>{{ message }}</h1>
-      <h1>{{ message }}</h1>
-    </div>
-  </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
-        message: "Привет, мир!"
-      };
-    }
-  };
-  </script>
-  
-  <style scoped>
-  /* ваши стили компонента */
-  h1 {
-    color: red;
-    font-family: sans-serif;
+  <section>
+    <h1>Имя кандидата, желаемая позиция</h1>
+    <p>Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.</p>
+  </section>
+  <address>
+    <a href="mailto:mail@gmail.com">mail@gmail.com</a>
+    <a href="tel:+79990000000">+7 (999) 000-00-00</a>
+    <p>г. Иннополис</p>
+  </address>
+</template>
+
+<style scoped lang="scss">
+template {
+  display: flex;
+
+  section {
+    display: flex;
+    width: 50vw;
   }
-  </style>
+}
+h1 {
+  color: black;
+}
+</style>
