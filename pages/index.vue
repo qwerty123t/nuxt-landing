@@ -1,16 +1,13 @@
 <template>
     <div>
         <Preloader />
-        <Main />
+        <Header />
+        <Hero />
     </div>
 </template>
 
 <script>
-import Main from '~/components/Main.vue';
-
-export default {
-components: {
-    Main
-}
-};
+import Preloader from '~/components/Preloader.vue';
+import Header from '~/components/Header.vue';
+import Hero from '~/components/Hero.vue';
 </script>

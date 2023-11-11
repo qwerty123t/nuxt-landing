@@ -14,8 +14,8 @@
   import logo from '@/assets/images/logo.png';
 </script>
   
-  <style scoped>
+<style scoped>
   img {
     width: 10vw;
   }
-  </style>
+</style>
