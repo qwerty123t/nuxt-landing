@@ -31,8 +31,10 @@
   section {
     display: flex;
     flex-direction: column;
-    width: calc(335px * 100vw / 375px);
-    margin: calc(30px * 100vw / 375px) auto 0;
+    width: calc(335px * 100% / 375px);
+    margin: calc(30px * 100% / 375px) auto 0;
+    //container-type: inline-size;
+    container: hero / inline-size;
 
     .text {
       h1 {
@@ -75,4 +77,59 @@
     }
   }
   
+  @container hero (min-width: 810px) {
+    section {
+      width: calc(1140px * 100% / 1440px);
+      max-width: 1800px;
+      display: flex;
+      flex-direction: row !important;
+      margin-top: calc(40px * 100cqw / 1140px);
+
+      .text {
+        display: flex;
+        flex-direction: column;
+        width: calc(560px * 100cqw / 1140px);
+
+        h1 {
+          font-size: calc(36px * 100cqw / 1140px);
+          font-weight: 700;
+          line-height: 140%;
+        }
+
+        p {
+          font-size: calc(14px * 100cqw / 1140px);
+          font-weight: 400;
+          line-height: 140%;
+          margin-top: calc(30px * 100cqw / 1140px);
+        }
+      }
+
+      address {
+        display: flex;
+        flex-direction: column;
+        width: calc(270px * 100cqw / 1140px);
+
+        a, p {
+          font-size: calc(14px * 100cqw / 1140px);
+          font-weight: 400;
+          line-height: 140%;
+          margin-top: calc(10px * 100cqw / 1140px);
+
+          .first {
+            margin-top: 0;
+          }
+        }
+
+        .icons {
+          display: flex;
+          
+          img {
+            width: calc(25px * 100cqw / 1140px);
+            aspect-ratio: 1;
+            margin-right: calc(20px * 100cqw / 1140px);
+          }
+        }
+      }
+    }
+  }
 </style>

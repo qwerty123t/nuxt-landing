@@ -22,11 +22,13 @@
   
 <style scoped lang="scss">
   header {
-    width: 89.33%; // 335px из 375px
+    width: calc(335px * 100% / 375px);
     margin: 5.33% auto 0; // 20px
     display: flex;
     justify-content: space-between;
-    container-type: inline-size;
+    //container-type: inline-size; sad
+    container: header / inline-size;
+
 
     .logo {
       width: 21.33vw; // 80px
@@ -58,10 +60,10 @@
   
   @container (min-width: 810px) {
     // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px
-    // 810 px это 79.16% (1140px) от ширины макета 1440px 
+    // 810 px это 79.16% от брейкпоинта 1025px 
 
     header {
-      width: 79.16%; // 1140px из 1440px
+      width: calc(1140px * 100% / 1440px);
       max-width: 1800px;
       //margin: 6.94% auto 0;
       margin: min(6.94%, calc(1800px * 6.94 / 100)) auto 0; // 100px
