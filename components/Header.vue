@@ -56,54 +56,54 @@
     }
   }
   
-@container (min-width: 810px) {
-  // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px
-  // 810 px это 79.16% (1140px) от ширины макета 1440px 
+  @container (min-width: 810px) {
+    // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px
+    // 810 px это 79.16% (1140px) от ширины макета 1440px 
 
-  header {
-    width: 79.16%; // 1140px из 1440px
-    max-width: 1800px;
-    //margin: 6.94% auto 0;
-    margin: min(6.94%, calc(1800px * 6.94 / 100)) auto 0; // 100px
-    display: flex;
-    justify-content: space-between;
-
-
-    .logo {
-      width: calc(150px * 100cqw / 1140px);
-      aspect-ratio: 1;
-    }
-
-    button {
-      display: none;
-    }
-
-    ul {
+    header {
+      width: 79.16%; // 1140px из 1440px
+      max-width: 1800px;
+      //margin: 6.94% auto 0;
+      margin: min(6.94%, calc(1800px * 6.94 / 100)) auto 0; // 100px
       display: flex;
-      list-style-type: none;
-      font-size: calc(18px * 100cqw / 1140px);
-      font-weight: 700;
-      position: relative;
+      justify-content: space-between;
 
-      li {
-        margin-right: calc(30px * 100cqw / 1140px); // 30px
-        z-index: 1;
 
-        .last {
-          margin-right: 0;
+      .logo {
+        width: calc(150px * 100cqw / 1140px);
+        aspect-ratio: 1;
+      }
+
+      button {
+        display: none;
+      }
+
+      ul {
+        display: flex;
+        list-style-type: none;
+        font-size: calc(18px * 100cqw / 1140px);
+        font-weight: 700;
+        position: relative;
+
+        li {
+          margin-right: calc(30px * 100cqw / 1140px); // 30px
+          z-index: 1;
+
+          .last {
+            margin-right: 0;
+          }
+        }
+        
+        .line {
+          position: absolute;
+          width: calc(155px * 100cqw / 1140px);
+          top: calc(-125px * 100cqw / 1140px);
+          left: calc(-70px * 100cqw / 1140px);
+          z-index: 0;
         }
       }
-      
-      .line {
-        position: absolute;
-        width: calc(155px * 100cqw / 1140px);
-        top: calc(-125px * 100cqw / 1140px);
-        left: calc(-70px * 100cqw / 1140px);
-        z-index: 0;
-      }
-    }
 
+    }
   }
-}
 
 </style>
