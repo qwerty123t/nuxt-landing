@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="container">
         <!-- <Preloader /> -->
         <Header />
         <Hero />
@@ -37,6 +37,8 @@ import Education from '~/components/Education.vue';
         color: #282A33;
         font-family: 'SF Pro Display', system-ui, -apple-system, sans-serif;
     }
-
+    .container {
+        container-type: inline-size;
+    }
 
 </style>

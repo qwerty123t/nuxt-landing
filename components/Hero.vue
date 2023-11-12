@@ -1,6 +1,5 @@
 <template>
     <section>
-      <div class="inside">
         <div class="text">
           <h1>Имя кандидата, желаемая позиция</h1>
           <p>Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.</p>
@@ -17,7 +16,6 @@
             <a href="#"><img :src="tg" alt="Telegram" /></a>
           </div>
         </address>
-      </div>
     </section>
 </template>
 
@@ -28,10 +26,10 @@
 </script>
 
 <style scoped lang="scss">
-  .section {
-    container-type: inline-size;
-  }
-  .inside {
+  // .section {
+  //   container-type: inline-size;
+  // }
+  section {
     display: flex;
     flex-direction: column;
     width: calc(335px * 100% / 375px);
@@ -79,7 +77,7 @@
   }
 
   @container  (width > 810px) {
-    .inside {
+    section {
       flex-direction: row;
       width: calc(1140px * 100% / 1440px);
       max-width: 1800px;
