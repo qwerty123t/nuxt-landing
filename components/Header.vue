@@ -27,7 +27,7 @@
     display: flex;
     justify-content: space-between;
     //container-type: inline-size; sad
-    container: header / inline-size;
+    //container: header / inline-size;
 
 
     .logo {
