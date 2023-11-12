@@ -10,7 +10,7 @@
       <img :src="line" class="line" alt="" />
       <li>Резюме</li>
       <li>О себе</li>
-      <li>Навыки</li>
+      <li class="last">Навыки</li>
     </ul>
   </header>
 </template>
@@ -21,13 +21,12 @@
 </script>
   
 <style scoped lang="scss">
-@media (width <= 1024px) {
-  
   header {
     width: 89.33%; // 335px из 375px
     margin: 5.33% auto 0; // 20px
     display: flex;
     justify-content: space-between;
+    container-type: inline-size;
 
     .logo {
       width: 21.33vw; // 80px
@@ -56,17 +55,22 @@
       display: none;
     }
   }
-}
-@media (width > 1024px) {
   
+@container (min-width: 810px) {
+  // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px
+  // 810 px это 79.16% (1140px) от ширины макета 1440px 
+
   header {
     width: 79.16%; // 1140px из 1440px
-    margin: 6.94% auto 0; // 100px
+    max-width: 1800px;
+    //margin: 6.94% auto 0;
+    margin: min(6.94%, calc(1800px * 6.94 / 100)) auto 0; // 100px
     display: flex;
     justify-content: space-between;
 
+
     .logo {
-      width: 10.42vw; // 150px
+      width: calc(150px * 100cqw / 1140px);
       aspect-ratio: 1;
     }
 
@@ -77,24 +81,28 @@
     ul {
       display: flex;
       list-style-type: none;
-      font-size: 1.25vw; // 18px 
+      font-size: calc(18px * 100cqw / 1140px);
       font-weight: 700;
       position: relative;
 
       li {
-        font-size: 2vw;
-        margin-right: 2.08vw; // 30px
+        margin-right: calc(30px * 100cqw / 1140px); // 30px
         z-index: 1;
+
+        .last {
+          margin-right: 0;
+        }
       }
       
       .line {
         position: absolute;
-        width: 10.76vw; // 155px
-        top: -10vw;
-        left: -4vw;
+        width: calc(155px * 100cqw / 1140px);
+        top: calc(-125px * 100cqw / 1140px);
+        left: calc(-70px * 100cqw / 1140px);
         z-index: 0;
       }
     }
+
   }
 }
 
