@@ -34,5 +34,7 @@ import Education from '~/components/Education.vue';
     // defaults
     body {
         background-color: #FAFAFA;
+        color: #282A33;
+        font-family: 'SF Pro Display', system-ui, -apple-system, sans-serif;
     }
 </style>
