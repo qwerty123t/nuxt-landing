@@ -1,7 +1,7 @@
 <template>
     <section>
         <div class="text">
-          <h1>Имя кандидата, желаемая позиция</h1>
+          <h1>Имя кандидата, Желаемая позиция</h1>
           <p>Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.</p>
         </div>
 
@@ -26,14 +26,9 @@
 </script>
 
 <style scoped lang="scss">
-  // .section {
-  //   container-type: inline-size;
-  // }
   section {
     display: flex;
     flex-direction: column;
-    width: calc(335px * 100% / 375px);
-    margin: calc(30px * 100% / 375px) auto 0;
 
     .text {
       h1 {
@@ -79,14 +74,14 @@
   @container  (width > 810px) {
     section {
       flex-direction: row;
-      width: calc(1140px * 100% / 1440px);
-      max-width: 1800px;
+      justify-self: unset;
       margin-top: calc(40px * 100cqw / 1140px);
 
       .text {
         display: flex;
         flex-direction: column;
         width: calc(560px * 100cqw / 1140px);
+        text-wrap: balance;
 
         h1 {
           font-size: calc(36px * 100cqw / 1140px);

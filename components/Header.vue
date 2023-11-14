@@ -22,7 +22,6 @@
   
 <style scoped lang="scss">
   header {
-    width: calc(335px * 100% / 375px);
     margin: 5.33% auto 0; // 20px
     display: flex;
     justify-content: space-between;
@@ -59,14 +58,9 @@
   }
   
   @container (min-width: 810px) {
-    // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px
-    // 810 px это 79.16% от брейкпоинта 1025px 
 
     header {
-      width: calc(1140px * 100% / 1440px);
-      max-width: 1800px;
-      //margin: 6.94% auto 0;
-      margin: min(6.94%, calc(1800px * 6.94 / 100)) auto 0; // 100px
+      margin-top: calc(100px * 100cqw / 1140px); // 100px
       display: flex;
       justify-content: space-between;
 
@@ -90,11 +84,11 @@
         li {
           margin-right: calc(30px * 100cqw / 1140px); // 30px
           z-index: 1;
+        }
 
-          .last {
+        .last {
             margin-right: 0;
           }
-        }
         
         .line {
           position: absolute;
