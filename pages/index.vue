@@ -32,10 +32,25 @@ import Education from '~/components/Education.vue';
     }
 
     // defaults
+
+    @font-face {
+        font-family: "SF-Pro-Display";
+        src: local("SF Pro Display"),
+            url("../assets/fonts/SF-Pro-Display/sf-pro-display-regular.woff2") format("woff2");
+        font-weight: 400;
+    }
+
+    @font-face {
+        font-family: "SF-Pro-Display";
+        src: local("SF Pro Display"),
+            url("../assets/fonts/SF-Pro-Display/sf-pro-display-bold.woff2") format("woff2");
+        font-weight: 700;
+    }
+
     body {
         background-color: #FAFAFA;
         color: #282A33;
-        font-family: 'SF Pro Display', system-ui, -apple-system, sans-serif;
+        font-family: 'SF-Pro-Display', 'SF Pro Display', system-ui, -apple-system, sans-serif;
     }
 
     
