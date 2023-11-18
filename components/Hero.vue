@@ -31,6 +31,7 @@
     flex-direction: column;
 
     .text {
+      margin-top: calc(28px * 100vw / 375px);
       h1 {
         font-size: calc(28px * 100vw / 375px);
         font-weight: 700;

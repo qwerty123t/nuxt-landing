@@ -22,32 +22,29 @@
   
 <style scoped lang="scss">
   header {
-    margin: 5.33% auto 0; // 20px
+    margin: calc(22px * 100% / 375px) auto 0; // 20px
     display: flex;
     justify-content: space-between;
-    //container-type: inline-size; sad
-    //container: header / inline-size;
-
 
     .logo {
-      width: 21.33vw; // 80px
+      width: calc(80px * 100vw / 375px); // 80px
       aspect-ratio: 1;
     }
 
     button {
-      width: 16vw; // 60px
-      height: 16vw;
+      width: calc(60px * 100vw / 375px); // 60px
+      height: calc(60px * 100vw / 375px); // 60px
       aspect-ratio: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
       background-color: transparent;
-      margin-top: 2.66vw;
+      margin-top: calc(10px * 100vw / 375px); // 10px
 
       div {
-        width: 6.93vw;
-        height: 0.6vw;
-        margin-bottom: 1.6vw; // 6px
+        width: calc(26px * 100vw / 375px);
+        height: calc(2.25px * 100vw / 375px);
+        margin-bottom: calc(6px * 100vw / 375px);
         background-color: #282A33;
       }
     }
