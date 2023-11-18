@@ -8,7 +8,7 @@
     </button>
     <ul>
       <img :src="line" class="line" alt="" />
-      <li>Резюме</li>
+      <li class="first">Резюме</li>
       <li>О себе</li>
       <li class="last">Навыки</li>
     </ul>
@@ -77,21 +77,26 @@
         font-size: calc(18px * 100cqw / 1140px);
         font-weight: 700;
         position: relative;
+        margin-top: calc(0px * 100cqw / 1140px);
 
         li {
           margin-right: calc(30px * 100cqw / 1140px); // 30px
           z-index: 1;
         }
 
+        .first {
+          margin-right: calc(34px * 100cqw / 1140px);
+        }
+
         .last {
-            margin-right: 0;
-          }
+          margin-right: calc(3px * 100cqw / 1140px);
+        }
         
         .line {
           position: absolute;
-          width: calc(155px * 100cqw / 1140px);
-          top: calc(-125px * 100cqw / 1140px);
-          left: calc(-70px * 100cqw / 1140px);
+          width: calc(105px * 100cqw / 1140px);
+          top: calc(-96px * 100cqw / 1140px);
+          left: calc(-25px * 100cqw / 1140px);
           z-index: 0;
         }
       }
