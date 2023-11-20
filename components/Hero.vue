@@ -77,24 +77,23 @@
     section {
       flex-direction: row;
       justify-self: unset;
-      margin-top: calc(40px * 100cqw / 1140px);
+      margin-top: calc(0px * 100cqw / 1140px);
 
       .text {
         display: flex;
         flex-direction: column;
         width: calc(560px * 100cqw / 1140px);
-        text-wrap: balance;
+        margin-top: calc(40px * 100cqw / 1140px);
+
 
         h1 {
           font-size: calc(36px * 100cqw / 1140px);
-          font-weight: 700;
-          line-height: 140%;
+          text-wrap: balance;
         }
 
         p {
+          //text-wrap: balance; - Не по дизайн-макету
           font-size: calc(14px * 100cqw / 1140px);
-          font-weight: 400;
-          line-height: 140%;
           margin-top: calc(30px * 100cqw / 1140px);
         }
       }
@@ -103,12 +102,15 @@
         display: flex;
         flex-direction: column;
         width: calc(270px * 100cqw / 1140px);
+        margin-top: calc(30px * 100cqw / 1140px);
+        margin-left: calc(310px * 100cqw / 1140px);
+
 
         a, p {
           font-size: calc(14px * 100cqw / 1140px);
           font-weight: 400;
           line-height: 140%;
-          margin-top: calc(10px * 100cqw / 1140px);
+          margin-top: calc(10.5px * 100cqw / 1140px);
 
           .first {
             margin-top: 0;
@@ -116,7 +118,8 @@
         }
 
         .icons {
-          display: flex;
+          display: flex;       
+          margin-top: calc(4px * 100cqw / 1140px);
           
           img {
             width: calc(25px * 100cqw / 1140px);
