@@ -16,6 +16,10 @@
             <a href="#"><img :src="tg" alt="Telegram" /></a>
           </div>
         </address>
+
+        <img :src="lineSmall" class="line-small" alt="" />
+        <img :src="lineBig" class="line-big" alt="" />
+        
     </section>
 </template>
 
@@ -23,6 +27,8 @@
   import fb from '@/assets/images/bb.svg';
   import vk from '@/assets/images/vk.svg';
   import tg from '@/assets/images/tg.svg';
+  import lineSmall from '@/assets/images/lineHeroBottom.svg';
+  import lineBig from '@/assets/images/lineHeroBottomBig.svg';
 </script>
 
 <style scoped lang="scss">
@@ -71,10 +77,20 @@
         }
       }
     }
+
+    .line-small {
+      width: calc(370px * 100vw / 375px);
+      margin-top: calc(-62px * 100vw / 375px);
+      margin-left: calc(-16px * 100vw / 375px);
+    }
+    .line-big {
+      display: none;
+    }
   }
 
   @container  (width > 810px) {
     section {
+      flex-wrap: wrap;
       flex-direction: row;
       justify-self: unset;
       margin-top: calc(0px * 100cqw / 1140px);
@@ -127,6 +143,16 @@
             margin-right: calc(20px * 100cqw / 1140px);
           }
         }
+      }
+
+      .line-big {
+        display: block;
+        width: calc(1160px * 100cqw / 1140px);
+        margin-top: calc(-97px * 100cqw / 1140px);
+        margin-left: calc(-5px * 100cqw / 1140px);
+      }
+      .line-small {
+        display: none;
       }
     }
   }
