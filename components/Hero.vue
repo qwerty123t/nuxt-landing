@@ -31,7 +31,7 @@
     flex-direction: column;
 
     .text {
-      margin-top: calc(28px * 100vw / 375px);
+      margin-top: calc(30px * 100vw / 375px);
       h1 {
         font-size: calc(28px * 100vw / 375px);
         font-weight: 700;
@@ -41,14 +41,14 @@
         margin-top: calc(20px * 100vw / 375px);
         font-size: calc(14px * 100vw / 375px);
         font-weight: 400;
-        line-height: 140%;
+        line-height: 143%;
       }
     }
 
     address {
       display: flex;
       flex-direction: column;
-      margin-top: calc(20px * 100vw / 375px);
+      margin-top: calc(10px * 100vw / 375px);
       font-size: calc(14px * 100vw / 375px);
       font-weight: 400;
       line-height: 140%;
@@ -63,6 +63,7 @@
 
       .icons {
         display: flex;
+        margin-top: calc(5.5px * 100vw / 375px);
 
         img {
           width: calc(25px * 100vw / 375px);
