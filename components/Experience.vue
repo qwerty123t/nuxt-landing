@@ -1,33 +1,37 @@
 <template>
     <section>
         <h2>Опыт работы</h2>
-        <article>
+        <article class="first">
             <time datetime="2019-07">Июль 2019</time>
-            <div class="position">
-                <h3>Freelance Designer</h3>
-                <div class="first"></div>
-                <div class="second"></div>
-                <div class="third"></div>
-            </div>
+            <h3>
+                Freelance Designer
+                <div class="rhomb purple"></div>
+                <div class="rhomb yellow"></div>
+                <div class="rhomb blue"></div>
+            </h3>
             <p>Netherlands, Worldwide</p>
             <p>Available for a project or job in UX/UI, Visual and Product design.</p>
             <a href="#">Commercial tryouts</a>
-            <a href="#">Personal</a>
+            <a href="#">Personal projects</a>
         </article>
 
         <article>
             <time datetime="2017-01">Январь 2017 - Сентябрь 2018</time>
-            <div class="position">
-                <h3>Digital Designer</h3>
-                <div class="first"></div>
-                <div class="second"></div>
-            </div>
+            <h3>
+                Digital Designer
+                <div class="rhomb blue"></div>
+                <div class="rhomb pink"></div>
+            </h3>
             <div class="company">
-                <img>
-                <h4>J Creative Solutions</h4>
-                <p>Digital agency in Minsk, Belarus</p>
+                <img :src="jcs" alt="jcs" />
+
+                <div class="company-text">
+                    <h4>J Creative Solutions</h4>
+                    <p>Digital agency in Minsk, Belarus</p>
+                </div>
+                
             </div>
-            <p>Created visuals for digital marketing channels such as social media, promo web and online ads. Developed visual language from scratch or following the branding guidelines. Designed presentations for clients and indoor purposes.</p>
+            <p class="duties">Created visuals for digital marketing channels such as social media, promo web and online ads. Developed visual language from scratch or following the branding guidelines. Designed presentations<br>for clients and indoor purposes.</p>
             <a href="#">Agency projects</a>
         </article>
 
@@ -37,11 +41,13 @@
                 <h3>SEO Specialist → Lead SEO Specialist</h3>
             </div>
             <div class="company">
-                <img>
-                <h4>OZ.by</h4>
-                <p>Online bookstore in Minsk, Belarus</p>
+                <img :src="oz" alt="oz" />
+                <div class="company-text">
+                    <h4>OZ.by</h4>
+                    <p>Online bookstore in Minsk, Belarus</p>
+                </div>
             </div>
-            <p>Improved website performance and user experience of the biggest online bookstore OZ in Belarus, being a part of the marketing team, I interpreted Google Analytics data to IT, content and marketing colleagues. Advised on tech and content optimization strategy, automated processes, provided reports, increased organic traffic up to 150%.</p>
+            <p class="duties">Improved website performance and user experience of the biggest online bookstore OZ in Belarus, being a part of the marketing team,<br/>I interpreted Google Analytics data to IT, content and marketing colleagues. Advised on tech and content optimization strategy, automated processes, provided reports, increased organic traffic up to 150%.</p>
             <a href="#">Annual company report 2016</a>
         </article>
 
@@ -51,14 +57,15 @@
                 <h3>Content Specialist</h3>
             </div>
             <div class="company">
-                <img>
-                <h4>21vek.by</h4>
-                <p>E-commerce store in Minsk, Belarus</p>
+                <img :src="vek" alt="21vek" />
+                <div class="company-text">
+                    <h4>21vek.by</h4>
+                    <p>E-commerce store in Minsk, Belarus</p>
+                </div>
             </div>
-            <p>Added and modified the product information, prepared images and text for the website, developed categories filters, ensure all info is correct in the catalogue with the goal of improving online shopper experience.</p>
+            <p class="duties">Added and modified the product information, prepared images and text for the website, developed categories filters, ensure all info is correct in the catalogue with the goal of improving online shopper experience.</p>
         </article>
 
-        
         <article>
             <time datetime="2011-08">Август 2011 - Ноябрь 2014</time>
             <div class="position">
@@ -66,24 +73,134 @@
                 <div class="green"></div>
             </div>
             <div class="company">
-                <img>
-                <h4>Integral</h4>
-                <p>Microelectronics factory in Minsk, Belarus</p>
+                <img :src="integral" alt="integral" />
+                <div class="company-text">
+                    <h4>Integral</h4>
+                    <p>Microelectronics factory in Minsk, Belarus</p>
+                </div>
             </div>
-            <p>Supported retail accounting system LS Trade, troubleshoot technical problems.</p>
+            <p class="duties">Supported retail accounting system LS Trade, troubleshoot technical problems.</p>
         </article>
     </section>
 </template>
+
+<script setup>
+    import jcs from '@/assets/images/jcs.jpg';
+    import oz from '@/assets/images/oz.jpg';
+    import vek from '@/assets/images/21vek.jpg';
+    import integral from '@/assets/images/integral.svg';
+</script>
 
 <style scoped lang="scss">
     section {
         display: flex;
         flex-direction: column;
-        .text {
-        width: 50%;
+        margin-top: calc(-26.5px * 100vw / 375px);
+        
+        h2 {
+            font-size: calc(20px * 100vw / 375px);
+            font-weight: 700;
         }
-        adress {
-        width: 50%;
+
+        article {
+            margin-top: calc(58px * 100vw / 375px);
+
+            time {
+                color: #828282;
+                font-size: calc(14px * 100vw / 375px);
+                display: block;
+                margin-top: calc(2px * 100vw / 375px);
+            }
+
+            h3 {
+                margin-top: calc(8px * 100vw / 375px);
+                font-size: calc(14px * 100vw / 375px);
+                font-weight: 700;
+                position: relative;
+                display: inline-block; 
+                
+                .rhomb {
+                    position: absolute;
+                    top: calc(3px * 100vw / 375px);
+                    right: calc(-23px * 100vw / 375px);
+                    width: calc(12px * 100vw / 375px);
+                    aspect-ratio: 1;
+                    border-radius: calc(2px * 100vw / 375px);
+                    z-index: 2;
+                    transform: rotate(45deg);
+
+                    &:nth-child(2) {
+                        right: calc(-32px * 100vw / 375px);
+                        z-index: 1;
+                    }
+                    &:nth-child(3) {
+                        right: calc(-41px * 100vw / 375px);
+                        z-index: 0;
+                    }
+                    
+                } 
+                .purple {
+                    background: linear-gradient(45deg, #AEA9FE 50%, #938DF8 50%);
+                    }
+                .yellow {
+                    background: linear-gradient(45deg, #FFE975 50%, #FFCF41 50%);
+                }
+                .blue {
+                    background: linear-gradient(45deg, #77C9FB 50%, #4EBFF3 50%);
+                }
+                .pink {
+                    background: linear-gradient(45deg, #FE73A5 50%, #EF5389 50%);
+                }
+            }
+
+            p {
+                font-size: calc(14px * 100vw / 375px);
+                margin-top: calc(8px * 100vw / 375px);
+            }
+
+            .duties {
+                line-height: 143%;
+                margin-top: calc(5px * 100vw / 375px);
+            }
+
+            a {
+                display: block;
+                color: #2F80ED;
+                text-decoration: underline;
+                text-underline-offset: calc(2px * 100vw / 375px);
+                text-decoration-skip-ink: none;
+                font-size: calc(14px * 100vw / 375px);
+                margin-top: calc(4px * 100vw / 375px);
+            }
+
+            .company {
+                display: flex;
+                margin-top: calc(8px * 100vw / 375px);
+
+                img {
+                    width: calc(30px * 100vw / 375px);
+                    height: calc(30px * 100vw / 375px);
+                    border-radius: 50%;
+                }
+                .company-text {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: calc(8px * 100vw / 375px);
+
+                    h4 {
+                        font-size: 14px;
+                        font-weight: 700;
+                    }  
+                    p {
+                        margin-top: 0;
+                    }
+                }
+                
+            }
+        }
+        
+        .first {
+            margin-top: calc(18px * 100vw / 375px);
         }
     }
 
