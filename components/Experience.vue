@@ -81,6 +81,8 @@
             </div>
             <p class="duties">Supported retail accounting system LS Trade, troubleshoot technical problems.</p>
         </article>
+
+        <img :src="float" class="float" alt="" />
     </section>
 </template>
 
@@ -89,6 +91,7 @@
     import oz from '@/assets/images/oz.jpg';
     import vek from '@/assets/images/21vek.jpg';
     import integral from '@/assets/images/integral.svg';
+    import float from '@/assets/images/float.png';
 </script>
 
 <style scoped lang="scss">
@@ -201,6 +204,11 @@
         
         .first {
             margin-top: calc(18px * 100vw / 375px);
+        }
+
+        .float {
+            margin: calc(40px * 100vw / 375px) auto 0 auto;
+            width: calc(200px * 100vw / 375px);
         }
     }
 
