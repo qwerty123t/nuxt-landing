@@ -31,7 +31,7 @@
                 </div>
                 
             </div>
-            <p class="duties">Created visuals for digital marketing channels such as social media, promo web and online ads. Developed visual language from scratch or following the branding guidelines. Designed presentations<br>for clients and indoor purposes.</p>
+            <p class="duties second">Created visuals for digital marketing channels such as social media, promo web and online ads. Developed visual language from scratch or following the branding guidelines. Designed presentations<br>for clients and indoor purposes.</p>
             <a href="#">Agency projects</a>
         </article>
 
@@ -69,10 +69,13 @@
         <article>
             <time datetime="2011-08">Август 2011 - Ноябрь 2014</time>
             <div class="position">
-                <h3>Software Support Engineer</h3>
-                <div class="green"></div>
+                <h3>
+                    Software Support Engineer
+                    <div class="rhomb green"></div>
+                </h3>
+                
             </div>
-            <div class="company">
+            <div class="company last">
                 <img :src="integral" alt="integral" />
                 <div class="company-text">
                     <h4>Integral</h4>
@@ -82,7 +85,7 @@
             <p class="duties">Supported retail accounting system LS Trade, troubleshoot technical problems.</p>
         </article>
 
-        <img :src="float" class="float" alt="" />
+        <img :src="float" class="floating-guy" alt="" />
     </section>
 </template>
 
@@ -125,7 +128,7 @@
                 .rhomb {
                     position: absolute;
                     top: calc(3px * 100vw / 375px);
-                    right: calc(-23px * 100vw / 375px);
+                    right: calc(-22px * 100vw / 375px);
                     width: calc(12px * 100vw / 375px);
                     aspect-ratio: 1;
                     border-radius: calc(2px * 100vw / 375px);
@@ -133,18 +136,18 @@
                     transform: rotate(45deg);
 
                     &:nth-child(2) {
-                        right: calc(-32px * 100vw / 375px);
+                        right: calc(-31px * 100vw / 375px);
                         z-index: 1;
                     }
                     &:nth-child(3) {
-                        right: calc(-41px * 100vw / 375px);
+                        right: calc(-40px * 100vw / 375px);
                         z-index: 0;
                     }
                     
                 } 
                 .purple {
                     background: linear-gradient(45deg, #AEA9FE 50%, #938DF8 50%);
-                    }
+                }
                 .yellow {
                     background: linear-gradient(45deg, #FFE975 50%, #FFCF41 50%);
                 }
@@ -153,6 +156,9 @@
                 }
                 .pink {
                     background: linear-gradient(45deg, #FE73A5 50%, #EF5389 50%);
+                }         
+                .green {
+                    background: linear-gradient(45deg, #64DDBA 50%, #3FC59D 50%);
                 }
             }
 
@@ -163,6 +169,9 @@
 
             .duties {
                 line-height: 143%;
+                margin-top: calc(8px * 100vw / 375px);
+            }
+            .second {
                 margin-top: calc(5px * 100vw / 375px);
             }
 
@@ -173,7 +182,7 @@
                 text-underline-offset: calc(2px * 100vw / 375px);
                 text-decoration-skip-ink: none;
                 font-size: calc(14px * 100vw / 375px);
-                margin-top: calc(4px * 100vw / 375px);
+                margin-top: calc(3.8px * 100vw / 375px);
             }
 
             .company {
@@ -187,18 +196,25 @@
                 }
                 .company-text {
                     display: flex;
-                    flex-direction: column;
+                    //flex-direction: column;
+                    flex-wrap: wrap;
                     margin-left: calc(8px * 100vw / 375px);
+                    margin-top: auto;
+                    margin-bottom: auto;
 
                     h4 {
-                        font-size: 14px;
+                        font-size: calc(14px * 100vw / 375px);
                         font-weight: 700;
+                        margin-right: calc(9px * 100vw / 375px);
                     }  
                     p {
                         margin-top: 0;
                     }
                 }
                 
+                &.last {
+                    width: 102%;
+                }
             }
         }
         
@@ -206,8 +222,8 @@
             margin-top: calc(18px * 100vw / 375px);
         }
 
-        .float {
-            margin: calc(40px * 100vw / 375px) auto 0 auto;
+        .floating-guy {
+            margin: calc(39px * 100vw / 375px) auto 0 auto;
             width: calc(200px * 100vw / 375px);
         }
     }
