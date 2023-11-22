@@ -176,9 +176,9 @@
         }
 
         img {
-            width: calc(355px * 100vw / 375px);
+            width: calc(369px * 100vw / 375px);
             margin-top: calc(-12px * 100vw / 375px);
-            margin-left: calc(-12px * 100vw / 375px);
+            margin-left: calc(-19px * 100vw / 375px);
         }
     }
 

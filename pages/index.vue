@@ -5,6 +5,7 @@
         <Hero />
         <Experience />
         <Education />
+        <Skills />
     </div>
 </template>
 
@@ -14,6 +15,7 @@ import Header from '~/components/Header.vue';
 import Hero from '~/components/Hero.vue';
 import Experience from '~/components/Experience.vue';
 import Education from '~/components/Education.vue';
+import Skills from '~/components/Skills.vue';
 </script>
 
 <style lang="scss">
