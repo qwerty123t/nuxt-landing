@@ -1,5 +1,5 @@
 <template>
-    <a href="#header">Top</a>
+    <a href="#container">Top</a>
 </template>
 
 
@@ -13,7 +13,7 @@
         width: calc(30px * 100vw / 375px);
         height: calc(30px * 100vw / 375px);  
         align-self: end;
-        background-color: red;
+        background-color: transparent;
         border-radius: 50%;
         display: flex;
         justify-content: center;

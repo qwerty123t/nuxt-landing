@@ -1,5 +1,5 @@
 <template>
-  <header id="header">
+  <header>
     <img :src="logo" class="logo" alt="Rocket preloader" />
     <button>
       <div></div>
