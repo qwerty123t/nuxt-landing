@@ -43,8 +43,14 @@
             <p>Belarusian State University of Informatics and Radioelectronics, 2011 - 2015<br/>Bachelor&#39;s degree</p>
             <p>Polotsk State Economic College, 2007 - 2011 Associate&#39;s degree</p>
         </article>
+
+        <img :src="line" alt="" />
     </section>
 </template>
+
+<script setup>
+    import line from '@/assets/images/lineEducation.svg';
+</script>
 
 <style scoped lang="scss">
     section {
@@ -157,7 +163,7 @@
                 line-height: 140%;
                 text-wrap: balance;
             }
-            &:last-child h4{
+            &:nth-of-type(6) h4{
                 text-wrap: unset;
             }
             
@@ -167,6 +173,12 @@
                 font-weight: 400;
                 line-height: 143%;
             }
+        }
+
+        img {
+            width: calc(355px * 100vw / 375px);
+            margin-top: calc(-12px * 100vw / 375px);
+            margin-left: calc(-12px * 100vw / 375px);
         }
     }
 
