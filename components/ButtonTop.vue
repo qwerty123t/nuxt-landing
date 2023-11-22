@@ -1,5 +1,5 @@
 <template>
-    <a href="#container">Top</a>
+    <a href="#">Top</a>
 </template>
 
 

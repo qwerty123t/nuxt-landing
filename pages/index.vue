@@ -1,5 +1,5 @@
 <template>
-    <div class="container" id="container">
+    <div class="container">
         <!-- <Preloader /> -->
         <ButtonTop />
         <Header />
