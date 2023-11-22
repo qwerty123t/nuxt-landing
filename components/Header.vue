@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header id="header">
     <img :src="logo" class="logo" alt="Rocket preloader" />
     <button>
       <div></div>
@@ -22,7 +22,7 @@
   
 <style scoped lang="scss">
   header {
-    margin: calc(22px * 100% / 375px) auto 0; // 20px
+    margin: calc(-12px * 100% / 375px) auto 0; // 20px
     display: flex;
     justify-content: space-between;
 

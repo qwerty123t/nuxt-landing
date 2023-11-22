@@ -19,7 +19,7 @@
 
         <img :src="lineSmall" class="line-small" alt="" />
         <img :src="lineBig" class="line-big" alt="" />
-        
+
     </section>
 </template>
 

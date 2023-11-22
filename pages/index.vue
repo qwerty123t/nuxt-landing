@@ -1,21 +1,25 @@
 <template>
     <div class="container">
         <!-- <Preloader /> -->
+        <ButtonTop />
         <Header />
         <Hero />
         <Experience />
         <Education />
         <Skills />
+        <Footer />
     </div>
 </template>
 
 <script>
 // import Preloader from '~/components/Preloader.vue';
+import ButtonTop from '~/components/ButtonTop.vue';
 import Header from '~/components/Header.vue';
 import Hero from '~/components/Hero.vue';
 import Experience from '~/components/Experience.vue';
 import Education from '~/components/Education.vue';
 import Skills from '~/components/Skills.vue';
+import Footer from '~/components/Footer.vue';
 </script>
 
 <style lang="scss">
@@ -47,6 +51,10 @@ import Skills from '~/components/Skills.vue';
         src: local("SF Pro Display"),
             url("../assets/fonts/SF-Pro-Display/SFProDisplay-Bold.woff2") format("woff2");
         font-weight: 700;
+    }
+    
+    html {
+        scroll-behavior: smooth;
     }
 
     body {
