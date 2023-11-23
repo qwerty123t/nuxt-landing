@@ -186,7 +186,10 @@
     @container  (width > 810px) {
         section {
             flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             margin-top: calc(-66px * 100cqw / 1140px);
+            margin-left: calc(102px * 100cqw / 1140px);
 
             h2 {
                 font-size: calc(24px * 100cqw / 1140px);
@@ -194,7 +197,15 @@
             }
 
             article {
+                margin-top: calc(35px * 100cqw / 1140px);
                 width: calc(269px * 100cqw / 1140px);
+
+                &:nth-of-type(1){
+                    margin-top: calc(38px * 100cqw / 1140px);
+                }  
+                &:nth-of-type(2){
+                    margin-top: calc(36px * 100cqw / 1140px);
+                }
 
                 .rhomb {
                     width: calc(30px * 100cqw / 1140px);
@@ -202,17 +213,53 @@
                 }
 
                 .purple-wrapper {
-                    .purple, .blue, .yellow {
+                    margin-top: calc(0px * 100cqw / 1140px);
+                    margin-left: calc(-5px * 100cqw / 1140px);
+                    .purple {
                         width: calc(30px * 100cqw / 1140px);
                         height: calc(30px * 100cqw / 1140px);
+                        border-width: calc(4px * 100cqw / 1140px);
+                        border-radius: calc(8px * 100cqw / 1140px);
+                    }
+                    .blue {
+                        width: calc(17.5px * 100cqw / 1140px);
+                        height: calc(17.5px * 100cqw / 1140px);
+                        border-width: calc(3px * 100cqw / 1140px);
+                        border-radius: calc(6px * 100cqw / 1140px);
+                        transform: translateX(calc(11px * 100cqw / 1140px)) translateY(calc(-1px * 100cqw / 1140px)) rotate(45deg);
+                    }   
+                    .yellow {
+                        width: calc(17.5px * 100cqw / 1140px);
+                        height: calc(17.5px * 100cqw / 1140px);
+                        border-width: calc(3px * 100cqw / 1140px);
+                        border-radius: calc(6px * 100cqw / 1140px);
+                        transform: translateX(calc(-3px * 100cqw / 1140px)) translateY(calc(-1px * 100cqw / 1140px)) rotate(45deg);
                     }
                 }
 
+                .rhomb {
+                    border-width: calc(4px * 100cqw / 1140px);
+                    border-radius: calc(8px * 100cqw / 1140px);
+                    width: calc(28px * 100cqw / 1140px);
+                    height: calc(28px * 100cqw / 1140px);
+                }
+                .yellow {
+                    width: calc(30px * 100cqw / 1140px);
+                    height: calc(30px * 100cqw / 1140px);
+                }
+
+
                 h4 {
+                    margin-top: calc(11px * 100cqw / 1140px);
                     font-size: calc(14px * 100cqw / 1140px);
+                    width: calc(150px * 100cqw / 1140px);
+                    line-height: 143%;
                 }
                 p {
+                    margin-top: calc(5px * 100cqw / 1140px);
                     font-size: calc(14px * 100cqw / 1140px);
+                    width: calc(150px * 100cqw / 1140px);
+                    line-height: 143%;
                 }
             }
 
