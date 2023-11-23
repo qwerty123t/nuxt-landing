@@ -10,7 +10,7 @@
                 <div class="rhomb blue"></div>
             </h3>
             <p>Netherlands, Worldwide</p>
-            <p>Available for a project or job in UX/UI, Visual and Product design.</p>
+            <p class="duties first">Available for a project or job in UX/UI, Visual and Product design.</p>
             <a href="#">Commercial tryouts</a>
             <a href="#">Personal projects</a>
         </article>
@@ -38,7 +38,11 @@
         <article>
             <time datetime="2014-03">Март 2014 - Февраль 2017</time>
             <div class="position">
-                <h3>SEO Specialist → Lead SEO Specialist</h3>
+                <h3 class="seo">
+                    SEO Specialist → Lead SEO Specialist
+                    <div class="rhomb orange"></div>
+                    <div class="rhomb blue"></div>
+                </h3>
             </div>
             <div class="company">
                 <img :src="oz" alt="oz" />
@@ -54,7 +58,10 @@
         <article>
             <time datetime="2012-08">Август 2012 - Ноябрь 2013</time>
             <div class="position">
-                <h3>Content Specialist</h3>
+                <h3>
+                    Content Specialist
+                    <div class="rhomb orange"></div>
+                </h3>
             </div>
             <div class="company">
                 <img :src="vek" alt="21vek" />
@@ -160,6 +167,9 @@
                 .green {
                     background: linear-gradient(45deg, #64DDBA 50%, #3FC59D 50%);
                 }
+                .orange {
+                    background: linear-gradient(45deg, #FFBB87 50%, #FFA35C 50%);
+                }
             }
 
             p {
@@ -228,4 +238,93 @@
         }
     }
 
+    @container  (width > 810px) {
+        section {
+            margin-top: calc(-66px * 100cqw / 1140px);
+
+            h2 {
+                font-size: calc(24px * 100cqw / 1140px);
+                font-weight: 700;
+            }
+
+            article {
+                margin-top: calc(60px * 100cqw / 1140px);
+
+                time {
+                    margin-top: calc(0px * 100cqw / 1140px);
+                    font-size: calc(14px * 100cqw / 1140px);
+                }
+
+                h3 {
+                    margin-top: calc(8.5px * 100cqw / 1140px);
+                    font-size: calc(14px * 100cqw / 1140px);
+                    .rhomb {
+                        top: calc(3px * 100cqw / 1140px);
+                        right: calc(-5.8px * 100vw / 375px);
+                        width: calc(12px * 100cqw / 1140px);
+                        height: calc(12px * 100cqw / 1140px);
+                        border-radius: calc(2px * 100cqw / 1140px);
+
+                        &:nth-child(2) {
+                            right: calc(-8.2px * 100vw / 375px);
+                        }
+                        &:nth-child(3) {
+                            right: calc(-10.5px * 100vw / 375px);
+                        }
+                    }
+                }
+                .seo {
+                    font-size: calc(14.1px * 100cqw / 1140px);
+                }
+
+                p {
+                    margin-top: calc(8px * 100cqw / 1140px);
+                    font-size: calc(14px * 100cqw / 1140px);
+                }
+
+                .duties {
+                    margin-top: calc(8px * 100cqw / 1140px);
+                    width: calc(560px * 100cqw / 1140px);
+                }
+                .first {
+                    margin-top: calc(7px * 100cqw / 1140px);
+                }
+                .second {
+                    margin-top: calc(9px * 100cqw / 1140px);
+                }
+
+                a {
+                    margin-top: calc(1px * 100cqw / 1140px);
+                    font-size: calc(14px * 100cqw / 1140px); 
+                    text-underline-offset: calc(2px * 100cqw / 1140px);
+                    line-height: 130%;
+                }
+
+                .company {
+                    margin-top: calc(7px * 100cqw / 1140px);
+
+                    img {
+                        width: calc(30px * 100cqw / 1140px);
+                        height: calc(30px * 100cqw / 1140px);
+                    }
+                    .company-text {
+                        margin-left: calc(8px * 100cqw / 1140px);
+
+                        h4 {
+                            font-size: calc(14px * 100cqw / 1140px);
+                            margin-right: calc(8px * 100cqw / 1140px);
+                        }  
+                        p {
+                            margin-top: 0;
+                            font-size: calc(14px * 100cqw / 1140px);
+                        }
+                    }
+                }
+            }
+
+            .first {
+                margin-top: calc(7.5px * 100vw / 375px);
+            }
+        }
+    }
 </style>

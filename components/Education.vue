@@ -182,4 +182,43 @@
         }
     }
 
+
+    @container  (width > 810px) {
+        section {
+            flex-direction: column;
+            margin-top: calc(-66px * 100cqw / 1140px);
+
+            h2 {
+                font-size: calc(24px * 100cqw / 1140px);
+                width: fit-content;
+            }
+
+            article {
+                width: calc(269px * 100cqw / 1140px);
+
+                .rhomb {
+                    width: calc(30px * 100cqw / 1140px);
+                    height: calc(30px * 100cqw / 1140px);
+                }
+
+                .purple-wrapper {
+                    .purple, .blue, .yellow {
+                        width: calc(30px * 100cqw / 1140px);
+                        height: calc(30px * 100cqw / 1140px);
+                    }
+                }
+
+                h4 {
+                    font-size: calc(14px * 100cqw / 1140px);
+                }
+                p {
+                    font-size: calc(14px * 100cqw / 1140px);
+                }
+            }
+
+            img {
+                display: none;
+            }
+        }
+    }
 </style>

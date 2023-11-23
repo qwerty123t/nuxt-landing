@@ -4,8 +4,10 @@
         <ButtonTop />
         <Header />
         <Hero />
-        <Experience />
-        <Education />
+        <div class="experience-and-education">
+            <Experience />
+            <Education />
+        </div>
         <Skills />
         <Footer />
     </div>
@@ -71,11 +73,21 @@ import Footer from '~/components/Footer.vue';
         width: calc(335px * 100% / 375px);
         max-width: 1800px;
         margin: 0 auto;
+
+        .experience-and-education {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     @media (min-width: 1025px) {
         .container {
             width: calc(1140px * 100% / 1440px);
+
+            .experience-and-education {
+                display: flex;
+                flex-direction: row;
+            }
         }
     }
 

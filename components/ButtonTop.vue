@@ -20,5 +20,15 @@
         align-items: center;
         z-index: 5;
     }
+
+    
+    @container  (width > 810px) {
+        a {
+            top: calc(100vh - calc(75px * 100cqw / 1140px));
+            top: calc(100lvh - calc(75px * 100cqw / 1140px));
+            width: calc(48px * 100cqw / 1140px);
+            height: calc(48px * 100cqw / 1140px);
+        }
+    }
 </style>
 

@@ -57,7 +57,7 @@
   @container (min-width: 810px) {
 
     header {
-      margin-top: calc(100px * 100cqw / 1140px); // 100px
+      margin-top: calc(52px * 100cqw / 1140px); // 100px
       display: flex;
       justify-content: space-between;
 
