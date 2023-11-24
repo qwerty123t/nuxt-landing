@@ -1,6 +1,6 @@
 <template>
+    <Preloader />
     <div class="container">
-        <Preloader />
         <ButtonTop />
         <Header />
         <Hero />
@@ -12,7 +12,7 @@
 </template>
 
 <script setup>
-// import Preloader from '~/components/Preloader.vue';
+import Preloader from '~/components/Preloader.vue';
 import ButtonTop from '~/components/ButtonTop.vue';
 import Header from '~/components/Header.vue';
 import Hero from '~/components/Hero.vue';

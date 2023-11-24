@@ -1,15 +1,18 @@
 <template>
-    <div>
-      <img :src="rocket" alt="Rocket preloader" @load="handleImageLoad" ref="rocketImg"/>
-    </div>
+  <div id="bg">
+    <img id="rocket" :src="rocket" alt="Rocket preloader" />
+  </div>
 </template>
 
 <script setup>
-  import { ref } from 'vue';
   import { onMounted } from 'vue';
+  import { animate } from "motion"
   import rocket from '@/assets/images/preloader.png';
+
   let startTime;
-  const rocketImg = ref(null);
+  const minimalAnimationTime = 400; // в миллисекундах
+  const maximumAnimationTime = 2000;
+  const multiplier = 15;
 
   onMounted(() => {
     loadImage();
@@ -22,36 +25,69 @@
 
     // Событие decode вместо load. 
     // Потому что браузеру ещё нужно декодировать картинку после загрузки
-    img.decode().then(() => handleImageDecode());
+    img.decode()
+      .then(() => handleImageDecode())
+      .catch((error) => {
+        console.error('Error decoding image:', error);
+        animatePreloader(500)
+    });
   };
 
   const handleImageDecode = () => {
     const endTime = performance.now();
     const decodeTime = (endTime - startTime).toFixed(0);
     console.log(`Изображение декодировано за ${decodeTime} миллисекунд`);
-    
-    animateRocket(decodeTime);
+    animatePreloader(decodeTime);  
   };
 
-  const animateRocket = (decodeTime) => {
-    const rocketElement = rocketImg.value;
+  const animatePreloader = (decodeTime) => {
+    const animationDuration = clamp(minimalAnimationTime, decodeTime * multiplier, maximumAnimationTime);
+    const durationInSeconds = fromMillisecondsToSeconds(animationDuration)
 
-    const animationDuration = clamp(330, decodeTime * 10, 2000);
-    rocketElement.style.transition = `transform ${animationDuration}ms ease-in`;
-    
-    rocketElement.style.transform = 'translateX(70vw)';
-    console.log(`transform ${rocketElement.style.transition}ms ease-in`);
+    console.log(animationDuration)
+    animate('#rocket',
+      { transform: "translate(calc(100vw + 100%), calc(-100vh - 100%))" },
+      { 
+        duration: durationInSeconds,
+        easing: 'ease-in' 
+      }
+    )    
+    animate('#bg',
+      { opacity: [1, 0] },
+      { 
+        duration: 0.3,
+        delay: durationInSeconds,
+        easing: 'ease-in-out'
+      }
+    )
   };
   
   function clamp(min, value, max) {
     return Math.min(Math.max(value, min), max);
   }
+  function fromMillisecondsToSeconds(ms) {
+    return (ms / 1000).toFixed(3);
+  }
 </script>
 
 <style scoped lang="scss">
   div {
+    position: absolute;
+    opacity: 1;
+    z-index: 6;
+    width: 100%;
+    height: 100vh;
+    height: 100lvh;
+    background-color: #FAFAFA;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+
     img {
-      width: 10vw;
+      width: calc(591px * 100% / 1440px);
+      aspect-ratio: 1;
+      margin-left: calc(-591px * 100% / 1440px);
+      margin-bottom: calc(-591px * 100% / 1440px);
     }
   }
 </style>
