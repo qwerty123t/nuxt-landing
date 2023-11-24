@@ -67,15 +67,16 @@ import Hands from '~/components/Hands.vue';
     // 810 px это 79.16% от брейкпоинта 1025px 
     .container {
         container-type: inline-size;
-        width: calc(335px * 100% / 375px);
-        max-width: 1800px;
+        width: calc(335px * 100% / 375px); // = 89.33%
+        max-width: 810px; // 79.16% от 1024px
         margin: 0 auto;
     }
 
 
-    @media (min-width: 1025px) {
+    @media (width >= 1025px) {
         .container {
-            width: calc(1140px * 100% / 1440px);
+            width: calc(1140px * 100% / 1440px); // = 79.16%
+            max-width: 1800px;
         }
     }
 

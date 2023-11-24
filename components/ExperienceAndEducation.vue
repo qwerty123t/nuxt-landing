@@ -11,13 +11,13 @@
 </script>
 
 
-<style lang="scss">
+<style lang="scss" scoped>
     .experience-and-education {
         display: flex;
         flex-direction: column;
     }
 
-    @container (min-width: 810px) {
+    @container (width > 810px) {
         .experience-and-education {
             flex-direction: row;
         }

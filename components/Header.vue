@@ -54,7 +54,7 @@
     }
   }
   
-  @container (min-width: 810px) {
+  @container (width > 810px) {
 
     header {
       margin-top: calc(52px * 100cqw / 1140px); // 100px

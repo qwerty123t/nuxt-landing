@@ -70,6 +70,7 @@
         article {
             margin-top: calc(26px * 100vw / 375px);
             width: calc(157px * 100vw / 375px);
+            max-width: 50%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -97,6 +98,7 @@
                 display: flex;
                 flex-direction: row;
                 align-items: center;
+                justify-content: center;
                 .purple {
                     border-color: #CCC9FD;
                     background: linear-gradient(45deg, #AFAAFE 50%, #928CF8 50%);

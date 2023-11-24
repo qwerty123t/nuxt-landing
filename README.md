@@ -1,75 +1,65 @@
-# Nuxt 3 Minimal Starter
+# Лендинг Nuxt
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Библиотека анимаций [Motion One](https://motion.dev/)
 
-## Setup
+## Container queries
 
-Make sure to install the dependencies:
-
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
+Для того чтобы верстка была была резиновой от 1025px до 1800px, а далее переходила в статику, я использовал контейнерные единицы измерения (cqw)
 
 ```bash
-# npm
-npm run dev
+# Обернул все компоненты в div с классом container в файле index.vue
+# Компонент с прелоадером я не вставил в контейнер, чтобы прелоадер был на весь экран
+<template>
+    <Preloader />
+    <div class="container">
+        <ButtonTop />
+        <Header />
+        <Hero />
+        <ExperienceAndEducation />
+        <LineAfterEducation />
+        <Skills />
+        <Hands />
+    </div>
+</template>
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
-
-Build the application for production:
 
 ```bash
-# npm
-npm run build
+# Чтобы размеры от контейнера работали, определил тип контейнера в CSS
 
-# pnpm
-pnpm run build
+.container {
+    container-type: inline-size;
+}
 
-# yarn
-yarn build
-
-# bun
-bun run build
+# И добавил стили для центрирования и масштабирования
+.container {
+    container-type: inline-size;
+    width: calc(335px * 100% / 375px); // 335px - размер контейнера для смартфонов в макете Figma
+    max-width: 1800px;
+    margin: 0 auto;
+}
 ```
-
-Locally preview production build:
 
 ```bash
-# npm
-npm run preview
+# Задал размеры контейнера для декстопов
 
-# pnpm
-pnpm run preview
+@media (min-width: 1025px) {
+    .container {
+        width: calc(1140px * 100% / 1440px);
+    }
+}
 
-# yarn
-yarn preview
-
-# bun
-bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+```bash
+# Так как ширина контейнера 1140px составляет 79.16% от размеров фрейма в 1440px в макете Figma
+# То в компонентах для десктопных стилей я использовал @container (width > 810px) потому что 811px = 79.16%
+@container  (width > 810px) {
+    section {
+        display: flex;
+    }
+}
+
+```
