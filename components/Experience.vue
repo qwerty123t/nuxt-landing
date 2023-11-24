@@ -240,6 +240,7 @@
 
     @container  (width > 810px) {
         section {
+            position: relative;
             margin-top: calc(-66px * 100cqw / 1140px);
 
             h2 {
@@ -323,7 +324,15 @@
             }
 
             .first {
-                margin-top: calc(7.5px * 100vw / 375px);
+                margin-top: calc(28px * 100cqw / 1140px);
+            }
+
+            .floating-guy {
+                position: absolute;
+                top: calc(-1px * 100cqw / 1140px);
+                left: calc(464.5px * 100cqw / 1140px);
+                margin-top: 0;
+                width: calc(500px * 100cqw / 1140px);
             }
         }
     }

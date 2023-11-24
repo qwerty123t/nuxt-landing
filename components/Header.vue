@@ -8,9 +8,9 @@
     </button>
     <ul>
       <img :src="line" class="line" alt="" />
-      <li class="first">Резюме</li>
-      <li>О себе</li>
-      <li class="last">Навыки</li>
+      <li class="first"><a>Резюме</a></li>
+      <li><a>О себе</a></li>
+      <li class="last"><a>Навыки</a></li>
     </ul>
   </header>
 </template>

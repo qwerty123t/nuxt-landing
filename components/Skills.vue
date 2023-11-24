@@ -53,4 +53,9 @@
         }
     }
 
+    @container  (width > 810px) {
+        section {
+            margin-top: 0;
+        }
+    }
 </style>

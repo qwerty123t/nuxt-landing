@@ -27,13 +27,13 @@
 
         <article>
             <div class="rhomb light-blue"></div>
-            <h4>Graphic Design</h4>
+            <h4 class="h4-more">Graphic Design</h4>
             <p>Belarusian State Academy of Arts,<br/>2015 - 2017 Postgraduate Diploma</p>
         </article>
         
         <article>
             <div class="rhomb orange"></div>
-            <h4>SEO Specialist</h4>
+            <h4 class="h4-more">SEO Specialist</h4>
             <p>ARTOX Media,<br/>Jun-Aug 2012</p>
         </article>
         
@@ -189,7 +189,8 @@
             align-items: center;
             justify-content: flex-start;
             margin-top: calc(-66px * 100cqw / 1140px);
-            margin-left: calc(102px * 100cqw / 1140px);
+            margin-right: calc(1px * 100cqw / 1140px);
+            margin-left: auto;
 
             h2 {
                 font-size: calc(24px * 100cqw / 1140px);
@@ -255,6 +256,10 @@
                     width: calc(150px * 100cqw / 1140px);
                     line-height: 143%;
                 }
+                .h4-more {
+                    margin-top: calc(12px * 100cqw / 1140px);
+                }
+                
                 p {
                     margin-top: calc(5px * 100cqw / 1140px);
                     font-size: calc(14px * 100cqw / 1140px);
