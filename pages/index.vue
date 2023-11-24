@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <!-- <Preloader /> -->
+        <Preloader />
         <ButtonTop />
         <Header />
         <Hero />
