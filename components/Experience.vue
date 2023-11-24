@@ -181,6 +181,10 @@
                 line-height: 143%;
                 margin-top: calc(8px * 100vw / 375px);
             }
+            
+            .first {
+                line-height: 120%;
+            }
             .second {
                 margin-top: calc(5px * 100vw / 375px);
             }

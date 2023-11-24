@@ -10,9 +10,9 @@
     .hands {
         display: flex;
         width: 100vw;
-        margin-top: calc(40px * 100% / 375px);
+        margin-top: calc(45px * 100% / 375px);
         margin-bottom: calc(40px * 100% / 375px);
-        margin-left: calc(-20px * 100% / 375px);
+        margin-left: calc(-23px * 100% / 375px);
     }
     
     @container (min-width: 810px) {
