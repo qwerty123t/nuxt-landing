@@ -8,20 +8,22 @@
             <Experience />
             <Education />
         </div>
+        <img :src="line" alt="" class="line-experience"/>
         <Skills />
-        <Footer />
+        <img :src="hands" alt="" class="hands"/>
     </div>
 </template>
 
-<script>
+<script setup>
 // import Preloader from '~/components/Preloader.vue';
 import ButtonTop from '~/components/ButtonTop.vue';
 import Header from '~/components/Header.vue';
 import Hero from '~/components/Hero.vue';
 import Experience from '~/components/Experience.vue';
 import Education from '~/components/Education.vue';
+import line from '@/assets/images/lineExperienceBig.svg';
 import Skills from '~/components/Skills.vue';
-import Footer from '~/components/Footer.vue';
+import hands from '@/assets/images/hands.png';
 </script>
 
 <style lang="scss">
@@ -78,7 +80,19 @@ import Footer from '~/components/Footer.vue';
             display: flex;
             flex-direction: column;
         }
+
+        .line-experience {
+            display: none;
+        }
+        .hands {
+            display: flex;
+            width: 100vw;
+            margin-top: calc(40px * 100% / 375px);
+            margin-bottom: calc(40px * 100% / 375px);
+            margin-left: calc(-20px * 100% / 375px);
+        }
     }
+
 
     @media (min-width: 1025px) {
         .container {
@@ -87,6 +101,20 @@ import Footer from '~/components/Footer.vue';
             .experience-and-education {
                 display: flex;
                 flex-direction: row;
+            }
+
+            .line-experience {
+                display: flex;
+                width: 100%;
+                margin-top: calc(8px * 100cqw / 1140px);
+                margin-left: calc(-10px * 100cqw / 1140px);
+            }
+            .hands {
+                width: calc(512px * 100cqw / 1140px);
+                margin-top: calc(192px * 100cqw / 1140px);
+                margin-bottom: calc(50px * 100cqw / 1140px);
+                margin-left: auto;
+                margin-right: auto;
             }
         }
     }

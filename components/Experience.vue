@@ -249,7 +249,7 @@
             }
 
             article {
-                margin-top: calc(60px * 100cqw / 1140px);
+                margin-top: calc(59px * 100cqw / 1140px);
 
                 time {
                     margin-top: calc(0px * 100cqw / 1140px);
@@ -302,7 +302,7 @@
                 }
 
                 .company {
-                    margin-top: calc(7px * 100cqw / 1140px);
+                    margin-top: calc(8px * 100cqw / 1140px);
 
                     img {
                         width: calc(30px * 100cqw / 1140px);
@@ -324,7 +324,7 @@
             }
 
             .first {
-                margin-top: calc(28px * 100cqw / 1140px);
+                margin-top: calc(29px * 100cqw / 1140px);
             }
 
             .floating-guy {

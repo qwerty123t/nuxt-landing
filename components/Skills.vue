@@ -55,7 +55,31 @@
 
     @container  (width > 810px) {
         section {
-            margin-top: 0;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: calc(-167px * 100cqw / 1140px);
+
+            h2 {
+                font-size: calc(24px * 100cqw / 1140px);
+                width: 100%;
+            }
+
+            article {
+                width: calc(270px * 100cqw / 1140px);
+                margin-top: calc(29px * 100cqw / 1140px);
+                //margin-left: calc(20px * 100cqw / 1140px);
+
+                h4 {
+                    font-size: calc(14px * 100cqw / 1140px);
+                }
+
+                p {
+                    font-size: calc(14px * 100cqw / 1140px);
+                    margin-top: calc(7px * 100cqw / 1140px);
+                    line-height: 143%
+                }
+            }
         }
     }
 </style>
