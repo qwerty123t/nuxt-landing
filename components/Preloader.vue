@@ -53,7 +53,10 @@
       }
     )    
     animate('#bg',
-      { opacity: [1, 0] },
+      { 
+        opacity: [1, 0],
+        visibility: 'hidden'
+      },
       { 
         duration: 0.3,
         delay: durationInSeconds,
