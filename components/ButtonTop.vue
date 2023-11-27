@@ -27,6 +27,8 @@
         align-items: center;
         justify-items: center;
         z-index: 5;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
         span {
             z-index: 6;
@@ -46,6 +48,7 @@
             grid-column: 1 / -1;
             grid-row: 1 / -1;
             overflow: visible;
+            pointer-events: none;
         }
 
         circle {

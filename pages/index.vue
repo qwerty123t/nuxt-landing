@@ -55,6 +55,7 @@ import Hands from '~/components/Hands.vue';
     
     html {
         scroll-behavior: smooth;
+        scroll-padding-top: 100px;
     }
 
     body {

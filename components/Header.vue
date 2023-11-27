@@ -8,9 +8,9 @@
     </button>
     <ul>
       <img :src="line" class="line" alt="" />
-      <li class="first"><a>Резюме</a></li>
-      <li><a>О себе</a></li>
-      <li class="last"><a>Навыки</a></li>
+      <li class="first"><a href="#resume">Резюме</a></li>
+      <li><a href="#aboutMe">О себе</a></li>
+      <li class="last"><a href="#skills">Навыки</a></li>
     </ul>
   </header>
 </template>
@@ -82,6 +82,7 @@
         li {
           margin-right: calc(30px * 100cqw / 1140px); // 30px
           z-index: 1;
+          cursor: pointer;
         }
 
         .first {
