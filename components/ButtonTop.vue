@@ -13,10 +13,11 @@
     a {
         position: sticky;
         margin-left: auto;
-        top: calc(100lvh - calc(50px * 100vw / 375px));
+        top: calc(100lvh - calc(60px * 100vw / 375px));
         right: 0;
-        width: calc(50px * 100vw / 375px);
-        height: calc(50px * 100vw / 375px);  
+        margin-right: calc(-18px * 100vw / 375px);
+        width: calc(65px * 100vw / 375px);
+        height: calc(65px * 100vw / 375px);  
         align-self: end;
         background-color: transparent;
         border-radius: 50%;
@@ -38,19 +39,20 @@
         svg {
             position: fixed;
             position: sticky;
-            top: 20px;
-            left: 20px;
+            width: calc(65px * 100vw / 375px);
+            height: calc(65px * 100vw / 375px);
             transform: rotate(-90deg);
             z-index: 5;
             grid-column: 1 / -1;
             grid-row: 1 / -1;
+            overflow: visible;
         }
 
         circle {
             stroke-dashoffset: 0;
             stroke-width: calc(1px * 100vw / 375px);
             fill: none;
-            r: calc(30px * 100vw / 375px);
+            r: min(49px, calc(22px * 100vw / 375px));
         }
 
         .bg {
@@ -67,13 +69,20 @@
     
     @container  (width > 810px) {
         a {
-            top: calc(100vh - calc(75px * 100cqw / 1140px));
-            top: calc(100lvh - calc(75px * 100cqw / 1140px));
+            top: calc(100vh - calc(140px * 100cqw / 1140px));
+            top: calc(100lvh - calc(140px * 100cqw / 1140px));
             width: calc(60px * 100cqw / 1140px);
             height: calc(60px * 100cqw / 1140px);
+            right: 0;
+            margin-right: calc(-132px * 100cqw / 1140px);
 
             span {
                 font-size: calc(14px * 100cqw / 1140px);
+            }
+
+            svg {
+                width: calc(60px * 100cqw / 1140px);
+                height: calc(60px * 100cqw / 1140px);
             }
 
             circle {

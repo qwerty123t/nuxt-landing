@@ -22,7 +22,7 @@
   
 <style scoped lang="scss">
   header {
-    margin: calc(-12px * 100% / 375px) auto 0; // 20px
+    margin: calc(-51px * 100% / 375px) auto 0; // 20px
     display: flex;
     justify-content: space-between;
 
@@ -57,7 +57,7 @@
   @container (width > 810px) {
 
     header {
-      margin-top: calc(52px * 100cqw / 1140px); // 100px
+      margin-top: calc(40px * 100cqw / 1140px); // 100px
       display: flex;
       justify-content: space-between;
 
