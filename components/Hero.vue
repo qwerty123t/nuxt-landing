@@ -11,9 +11,9 @@
           <p>г. Иннополис</p>
 
           <div class="icons">
-            <a href="#" id="fb"><img :src="fb" alt="Facebook" /></a>
-            <a href="#" id="vk"><img :src="vk" alt="VK" /></a>
-            <a :href="shareTelegramLink" id="tg"><img :src="tg" alt="Telegram" /></a>
+            <a href="#" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></a>
+            <a :href="shareVKLink" target="_blank" id="vk"><img :src="vk" alt="VK" /></a>
+            <a :href="shareTelegramLink" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></a>
           </div>
         </address>
 
@@ -35,6 +35,7 @@
   let bigText = ref("Имя кандидата, Желаемая позиция");
   let smallText = ref("Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.");
   let shareTelegramLink = ref(`https://t.me/share/url?url=${url}&text=${bigText.value}`);
+  let shareVKLink = ref(`https://vk.com/share.php?url=${url}&title=${bigText.value}`);
 
   const updateBigText = (e) => {
     bigText = e.target.innerText;
@@ -117,8 +118,10 @@
       width: calc(370px * 100vw / 375px);
       margin-top: calc(-62px * 100vw / 375px);
       margin-left: calc(-16px * 100vw / 375px);
+      z-index: -1;
     }
     .line-big {
+      z-index: -1;
       display: none;
     }
   }
@@ -185,7 +188,6 @@
         width: calc(1160px * 100cqw / 1140px);
         margin-top: calc(-97px * 100cqw / 1140px);
         margin-left: calc(-5px * 100cqw / 1140px);
-        z-index: -1;
       }
       .line-small {
         display: none;
