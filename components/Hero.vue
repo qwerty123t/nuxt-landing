@@ -1,8 +1,8 @@
 <template>
     <section id="resume">
         <div class="text">
-          <h1>Имя кандидата, Желаемая позиция</h1>
-          <p>Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.</p>
+          <h1 contenteditable @input="updateBigText">{{ bigText }}</h1>
+          <p contenteditable @input="updateSmallText">{{ smallText }}</p>
         </div>
 
         <address>
@@ -11,9 +11,9 @@
           <p>г. Иннополис</p>
 
           <div class="icons">
-            <a href="#"><img :src="fb" alt="Facebook" /></a>
-            <a href="#"><img :src="vk" alt="VK" /></a>
-            <a href="#"><img :src="tg" alt="Telegram" /></a>
+            <a href="#" id="fb"><img :src="fb" alt="Facebook" /></a>
+            <a href="#" id="vk"><img :src="vk" alt="VK" /></a>
+            <a :href="shareTelegramLink" id="tg"><img :src="tg" alt="Telegram" /></a>
           </div>
         </address>
 
@@ -24,12 +24,46 @@
 </template>
 
 <script setup>
+  import { ref } from 'vue';
   import fb from '@/assets/images/bb.svg';
   import vk from '@/assets/images/vk.svg';
   import tg from '@/assets/images/tg.svg';
   import lineSmall from '@/assets/images/lineHeroBottom.svg';
   import lineBig from '@/assets/images/lineHeroBottomBig.svg';
+
+  const url = 'https://nuxt-landing-three.vercel.app/'
+  let bigText = ref("Имя кандидата, Желаемая позиция");
+  let smallText = ref("Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.");
+  let shareTelegramLink = ref(`https://t.me/share/url?url=${url}&text=${bigText}`);
+
+  const updateBigText = (e) => {
+    bigText = e.target.innerText;
+    console.log(bigText);
+  };
+
+  const updateSmallText = (e) => {
+    smallText = e.target.innerText;
+    console.log(smallText);
+  };
+
+// export default {
+//   data() {
+//     return {
+//       bigText: "",
+//       smallText: ""
+//     }
+//   },
+//   methods : {
+//     updateText(e){
+//       this.text = e.target.innerText;
+//       console.log(this.text );
+//       console.log(this.text );
+//     }
+//   }
+// }
 </script>
+
+
 
 <style scoped lang="scss">
   section {
@@ -74,6 +108,7 @@
         img {
           width: calc(25px * 100vw / 375px);
           margin-right: calc(20px * 100vw / 375px);
+          cursor: pointer;
         }
       }
     }
@@ -150,6 +185,7 @@
         width: calc(1160px * 100cqw / 1140px);
         margin-top: calc(-97px * 100cqw / 1140px);
         margin-left: calc(-5px * 100cqw / 1140px);
+        z-index: -1;
       }
       .line-small {
         display: none;

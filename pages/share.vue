@@ -1,25 +1,11 @@
 <template>
-    <Preloader />
     <div class="container">
-        <ButtonTop />
-        <Header />
-        <Hero />
-        <ExperienceAndEducation />
-        <LineAfterEducation />
-        <Skills />
-        <Hands />
+        <Share />
     </div>
 </template>
 
 <script setup>
-import Preloader from '~/components/Preloader.vue';
-import ButtonTop from '~/components/ButtonTop.vue';
-import Header from '~/components/Header.vue';
-import Hero from '~/components/Hero.vue';
-import ExperienceAndEducation from '~/components/ExperienceAndEducation.vue';
-import LineAfterEducation from '~/components/LineAfterEducation.vue';
-import Skills from '~/components/Skills.vue';
-import Hands from '~/components/Hands.vue';
+import Share from '~/components/Share.vue';
 </script>
 
 <style lang="scss">
