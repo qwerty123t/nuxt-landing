@@ -8,19 +8,31 @@
         <LineAfterEducation />
         <Skills />
         <Hands />
+        <OgImage v-bind="ogImageOptions" />
     </div>
 </template>
 
+
+
 <script setup>
-import Preloader from '~/components/Preloader.vue';
-import ButtonTop from '~/components/ButtonTop.vue';
-import Header from '~/components/Header.vue';
-import Hero from '~/components/Hero.vue';
-import ExperienceAndEducation from '~/components/ExperienceAndEducation.vue';
-import LineAfterEducation from '~/components/LineAfterEducation.vue';
-import Skills from '~/components/Skills.vue';
-import Hands from '~/components/Hands.vue';
+    import Preloader from '~/components/Preloader.vue';
+    import ButtonTop from '~/components/ButtonTop.vue';
+    import Header from '~/components/Header.vue';
+    import Hero from '~/components/Hero.vue';
+    import ExperienceAndEducation from '~/components/ExperienceAndEducation.vue';
+    import LineAfterEducation from '~/components/LineAfterEducation.vue';
+    import Skills from '~/components/Skills.vue';
+    import Hands from '~/components/Hands.vue';
+
+    const ogImageOptions = {
+        title: 'My awesome home page.',
+    }
+
+    defineOgImage(ogImageOptions)
 </script>
+
+
+
 
 <style lang="scss">
 
