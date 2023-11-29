@@ -34,7 +34,7 @@
   const url = 'https://nuxt-landing-three.vercel.app/'
   let bigText = ref("Имя кандидата, Желаемая позиция");
   let smallText = ref("Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.");
-  let shareTelegramLink = ref(`https://t.me/share/url?url=${url}&text=${bigText}`);
+  let shareTelegramLink = ref(`https://t.me/share/url?url=${url}&text=${bigText.value}`);
 
   const updateBigText = (e) => {
     bigText = e.target.innerText;
