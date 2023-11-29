@@ -11,9 +11,9 @@
           <p>г. Иннополис</p>
 
           <div class="icons">
-            <a href="#" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></a>
+            <a :href="shareFBLink" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></a>
             <a :href="shareVKLink" target="_blank" id="vk"><img :src="vk" alt="VK" /></a>
-            <a :href="shareTelegramLink" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></a>
+            <a :href="shareTGLink" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></a>
           </div>
         </address>
 
@@ -34,8 +34,9 @@
   const url = 'https://nuxt-landing-three.vercel.app/'
   let bigText = ref("Имя кандидата, Желаемая позиция");
   let smallText = ref("Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.");
-  let shareTelegramLink = ref(`https://t.me/share/url?url=${url}&text=${bigText.value}`);
+  let shareTGLink = ref(`https://t.me/share/url?url=${url}&text=${bigText.value}`);
   let shareVKLink = ref(`https://vk.com/share.php?url=${url}&title=${bigText.value}`);
+  let shareFBLink = ref(`http://www.facebook.com/share.php?u=${url}&title=${bigText.value}`);
 
   const updateBigText = (e) => {
     bigText = e.target.innerText;
