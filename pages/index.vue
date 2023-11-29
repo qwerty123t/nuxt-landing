@@ -1,7 +1,7 @@
 <template>
     <Preloader />
     <div class="container">
-        <Share />
+        <!-- <Share /> -->
         <ButtonTop />
         <Header />
         <Hero />

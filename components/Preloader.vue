@@ -91,7 +91,18 @@
       aspect-ratio: 1;
       margin-left: calc(-591px * 100% / 1440px);
       margin-bottom: calc(-591px * 100% / 1440px);
+      rotate: -5deg;
     }
+  }
+
+  
+  @media (width > 1024px) {
+    div {
+      img {
+        rotate: unset;
+      }
+    }
+
   }
 </style>
 
