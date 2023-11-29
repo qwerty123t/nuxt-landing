@@ -8,7 +8,6 @@
         <LineAfterEducation />
         <Skills />
         <Hands />
-        <OgImage v-bind="ogImageOptions" />
     </div>
 </template>
 
@@ -23,12 +22,6 @@
     import LineAfterEducation from '~/components/LineAfterEducation.vue';
     import Skills from '~/components/Skills.vue';
     import Hands from '~/components/Hands.vue';
-
-    const ogImageOptions = {
-        title: 'My awesome home page.',
-    }
-
-    defineOgImage(ogImageOptions)
 </script>
 
 
