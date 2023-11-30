@@ -1,6 +1,6 @@
 <template>
     <a href="#">
-        <img :src="arrow"  id="arrow" alt="" class="arrow"/>
+        <img :src="arrow"  alt="" class="arrow"/>
         <span id="number">0</span>
         <svg viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
@@ -115,7 +115,7 @@
 
 
 <script setup>
-    import { onMounted, ref } from 'vue';
+    import { onMounted } from 'vue';
     import { animate, scroll } from "motion";
     import arrow from '@/assets/images/arrow.svg';
 
