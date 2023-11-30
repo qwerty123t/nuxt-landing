@@ -13,9 +13,9 @@
         <p>г. Иннополис</p>
 
         <div class="icons">
-          <a :href="shareFBLink" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></a>
-          <a :href="shareVKLink" target="_blank" id="vk"><img :src="vk" alt="VK" /></a>
-          <a :href="shareTGLink" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></a>
+          <button @click="shareFacebook" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></button>
+          <button @click="shareVK" target="_blank" id="vk"><img :src="vk" alt="VK" /></button>
+          <button @click="shareTelegram" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></button>
         </div>
       </address>
 
@@ -25,7 +25,7 @@
 
       <article id="capture">
         <div class="text">
-              <p class="name">Имя кандидата, Желаемая позиция</p>
+              <p class="name">Романов Кирилл, Фронтенд-разработчик</p>
               <p class="description">Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.</p>
         </div>
           <img :src="shareImg" class="share-img" alt="" />
@@ -35,7 +35,7 @@
 
 <script setup>
   import html2canvas from 'html2canvas';
-  import { ref, onMounted } from 'vue';
+  import { ref } from 'vue';
   import fb from '@/assets/images/bb.svg';
   import vk from '@/assets/images/vk.svg';
   import tg from '@/assets/images/tg.svg';
@@ -46,10 +46,6 @@
   const url = 'https://nuxt-landing-three.vercel.app/'
   let bigText = ref("Романов Кирилл, Фронтенд-разработчик");
   let smallText = ref("Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.");
-  let shareTGLink = ref(`https://t.me/share/url?url=${url}&text=${bigText.value}`);
-  let shareVKLink = ref(`https://vk.com/share.php?url=${url}&title=${bigText.value}`);
-  let shareFBLink = ref(`http://www.facebook.com/share.php?u=${url}&title=${bigText.value}`);
-  let imageLinkInMetaTag = ref(`https://jghfk.com`);
 
   const updateBigText = (e) => {
     bigText = e.target.innerText;
@@ -61,15 +57,21 @@
     console.log(smallText);
   };
 
+    const shareFacebook = () => {
+    takeScreenshotAndShare(`http://www.facebook.com/share.php?u=${url}&title=${bigText.value}`);
+  };
 
-onMounted(() => {
-  const resume = document.getElementById("resume");
+  const shareVK = () => {
+    takeScreenshotAndShare(`https://vk.com/share.php?url=${url}&title=${bigText.value}`);
+  };
+
+  const shareTelegram = () => {
+    takeScreenshotAndShare(`https://t.me/share/url?url=${url}&text=${bigText.value}`);
+  };
+
+const takeScreenshotAndShare = (shareLink) => {
   const capture = document.getElementById("capture");
 
-  const head = document.head;
-  let twitterCardMetaTag = document.querySelector('meta[name="twitter:card"]');
-  let twitterTitleMetaTag = document.querySelector('meta[name="twitter:title"]');
-  let twitterDescriptionMetaTag = document.querySelector('meta[name="twitter:description"]');
   let twitterImageMetaTag = document.querySelector('meta[name="twitter:image"]');
 
   html2canvas(capture, {
@@ -78,41 +80,18 @@ onMounted(() => {
     scale: 1
   }).then(canvas => {
     const image = new Image();
-    
     image.src = canvas.toDataURL();
-
-    if (!twitterCardMetaTag) {
-      // If the meta tag doesn't exist, create a new one
-      twitterCardMetaTag = document.createElement('meta');
-      twitterCardMetaTag.setAttribute('name', 'twitter:card');
-      head.appendChild(twitterCardMetaTag);
-    }
-    twitterCardMetaTag.setAttribute('content', image.src);
-
-    if (!twitterTitleMetaTag) {
-      twitterTitleMetaTag = document.createElement('meta');
-      twitterTitleMetaTag.setAttribute('name', 'twitter:title');
-      head.appendChild(twitterTitleMetaTag);
-    }
-    twitterTitleMetaTag.setAttribute('content', bigText.value);
-
-    if (!twitterDescriptionMetaTag) {
-      twitterDescriptionMetaTag = document.createElement('meta');
-      twitterDescriptionMetaTag.setAttribute('name', 'twitter:description');
-      head.appendChild(twitterDescriptionMetaTag);
-    }
-    twitterDescriptionMetaTag.setAttribute('content', smallText.value);
 
     if (!twitterImageMetaTag) {
       twitterImageMetaTag = document.createElement('meta');
       twitterImageMetaTag.setAttribute('name', 'twitter:image');
-      head.appendChild(twitterImageMetaTag);
+      document.head.appendChild(twitterImageMetaTag);
     }
     twitterImageMetaTag.setAttribute('content', image.src);
 
-    console.log('Twitter card tags added successfully.');
+    window.open(shareLink, '_blank');
   });
-});
+};
 </script>
 
 
@@ -252,6 +231,7 @@ onMounted(() => {
         flex-direction: column;
         position: absolute;
         left: 100vw;
+        background-color: #FAFAFA;
 
         .text {
             margin-top: calc(30px * 100vw / 375px);
@@ -287,7 +267,7 @@ article {
     .text {
         .name {
             font-size: calc(36px * 100cqw / 968px);
-            max-width: calc(350px * 100cqw / 968px);
+            max-width: 100%;
         }
 
         .description {

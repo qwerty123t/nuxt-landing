@@ -1,11 +1,12 @@
 <template>
-  <head>
-    <title>Резюме?</title>
-    <meta name="description" property="og:description" content="разработчик" />  
-    <meta property="og:title" content="bigText" />
-    <meta property="og:image" content="imageLinkInMetaTag" />
-    <meta property="og:url" content="https://nuxt-landing-three.vercel.app" />
-  </head>
+    
+    <Head>
+        <Title>Тестовое</Title>
+        <Meta name="description" property="og:description" content="разработчик" />  
+        <Meta property="og:title" content="Резюме" />
+        <Meta property="og:image" content="../images/share.jpg" />
+        <Meta property="og:url" content="https://nuxt-landing-three.vercel.app" />
+    </Head>
     <Preloader />
     <div class="container">
         <ButtonTop />
@@ -29,6 +30,10 @@
     import LineAfterEducation from '~/components/LineAfterEducation.vue';
     import Skills from '~/components/Skills.vue';
     import Hands from '~/components/Hands.vue';
+
+// useHead({
+//     meta: [{name: "description", content: "sdfdsf"}, {property: "og:title", content: "this is og title"}]
+// })
 </script>
 
 
