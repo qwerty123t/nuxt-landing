@@ -1,11 +1,11 @@
 <template>
-  <!-- <head>
-    <title>{{ bigText }}</title>
+  <head>
+    <title>Резюме?</title>
     <meta name="description" property="og:description" content="разработчик" />  
     <meta property="og:title" content="bigText" />
     <meta property="og:image" content="imageLinkInMetaTag" />
     <meta property="og:url" content="https://nuxt-landing-three.vercel.app" />
-  </head> -->
+  </head>
     <Preloader />
     <div class="container">
         <ButtonTop />

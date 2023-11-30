@@ -41,6 +41,7 @@
   import tg from '@/assets/images/tg.svg';
   import lineSmall from '@/assets/images/lineHeroBottom.svg';
   import lineBig from '@/assets/images/lineHeroBottomBig.svg';
+  import shareImg from '@/assets/images/share.png';
 
   const url = 'https://nuxt-landing-three.vercel.app/'
   let bigText = ref("Романов Кирилл, Фронтенд-разработчик");
