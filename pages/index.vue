@@ -1,7 +1,13 @@
 <template>
+  <!-- <head>
+    <title>{{ bigText }}</title>
+    <meta name="description" property="og:description" content="разработчик" />  
+    <meta property="og:title" content="bigText" />
+    <meta property="og:image" content="imageLinkInMetaTag" />
+    <meta property="og:url" content="https://nuxt-landing-three.vercel.app" />
+  </head> -->
     <Preloader />
     <div class="container">
-        <!-- <Share /> -->
         <ButtonTop />
         <Header />
         <Hero />
@@ -15,7 +21,6 @@
 
 
 <script setup>
-import Share from '~/components/Share.vue';
     import Preloader from '~/components/Preloader.vue';
     import ButtonTop from '~/components/ButtonTop.vue';
     import Header from '~/components/Header.vue';

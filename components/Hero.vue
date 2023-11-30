@@ -1,38 +1,41 @@
 <template>
-    <section id="resume">
-        <div class="text">
-          <h1 contenteditable @input="updateBigText">{{ bigText }}</h1>
-          <p contenteditable @input="updateSmallText">{{ smallText }}</p>
-        </div>
 
-        <address>
-          <a href="mailto:mail@gmail.com" class="first">mail@gmail.com</a>
-          <a href="tel:+79990000000">+7 (999) 000-00-00</a>
-          <p>г. Иннополис</p>
 
-          <div class="icons">
-            <a :href="shareFBLink" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></a>
-            <a :href="shareVKLink" target="_blank" id="vk"><img :src="vk" alt="VK" /></a>
-            <a :href="shareTGLink" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></a>
-          </div>
-        </address>
-
-        <img :src="lineSmall" class="line-small" alt="" />
-        <img :src="lineBig" class="line-big" alt="" />
-        <article>
+  <section id="resume">
       <div class="text">
-            <p class="name">Имя кандидата, Желаемая позиция</p>
-            <p class="description">Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.</p>
+        <h1 contenteditable @input="updateBigText">{{ bigText }}</h1>
+        <p contenteditable @input="updateSmallText">{{ smallText }}</p>
+      </div>
+
+      <address>
+        <a href="mailto:mail@gmail.com" class="first">mail@gmail.com</a>
+        <a href="tel:+79990000000">+7 (999) 000-00-00</a>
+        <p>г. Иннополис</p>
+
+        <div class="icons">
+          <a :href="shareFBLink" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></a>
+          <a :href="shareVKLink" target="_blank" id="vk"><img :src="vk" alt="VK" /></a>
+          <a :href="shareTGLink" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></a>
         </div>
-        <img :src="shareImg" class="share-img" alt="" />
-    </article>
-    </section>
+      </address>
+
+      <img :src="lineSmall" class="line-small" alt="" />
+      <img :src="lineBig" class="line-big" alt="" />
 
 
+      <article id="capture">
+        <div class="text">
+              <p class="name">Имя кандидата, Желаемая позиция</p>
+              <p class="description">Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.</p>
+        </div>
+          <img :src="shareImg" class="share-img" alt="" />
+      </article>
+  </section>
 </template>
 
 <script setup>
-  import { ref } from 'vue';
+  import html2canvas from 'html2canvas';
+  import { ref, onMounted } from 'vue';
   import fb from '@/assets/images/bb.svg';
   import vk from '@/assets/images/vk.svg';
   import tg from '@/assets/images/tg.svg';
@@ -45,6 +48,7 @@
   let shareTGLink = ref(`https://t.me/share/url?url=${url}&text=${bigText.value}`);
   let shareVKLink = ref(`https://vk.com/share.php?url=${url}&title=${bigText.value}`);
   let shareFBLink = ref(`http://www.facebook.com/share.php?u=${url}&title=${bigText.value}`);
+  let imageLinkInMetaTag = ref(`https://jghfk.com`);
 
   const updateBigText = (e) => {
     bigText = e.target.innerText;
@@ -56,21 +60,58 @@
     console.log(smallText);
   };
 
-// export default {
-//   data() {
-//     return {
-//       bigText: "",
-//       smallText: ""
-//     }
-//   },
-//   methods : {
-//     updateText(e){
-//       this.text = e.target.innerText;
-//       console.log(this.text );
-//       console.log(this.text );
-//     }
-//   }
-// }
+
+onMounted(() => {
+  const resume = document.getElementById("resume");
+  const capture = document.getElementById("capture");
+
+  const head = document.head;
+  let twitterCardMetaTag = document.querySelector('meta[name="twitter:card"]');
+  let twitterTitleMetaTag = document.querySelector('meta[name="twitter:title"]');
+  let twitterDescriptionMetaTag = document.querySelector('meta[name="twitter:description"]');
+  let twitterImageMetaTag = document.querySelector('meta[name="twitter:image"]');
+
+  html2canvas(capture, {
+    width: 700,
+    height: 500,
+    scale: 1
+  }).then(canvas => {
+    const image = new Image();
+    
+    image.src = canvas.toDataURL();
+
+    if (!twitterCardMetaTag) {
+      // If the meta tag doesn't exist, create a new one
+      twitterCardMetaTag = document.createElement('meta');
+      twitterCardMetaTag.setAttribute('name', 'twitter:card');
+      head.appendChild(twitterCardMetaTag);
+    }
+    twitterCardMetaTag.setAttribute('content', 'summary_large_image');
+
+    if (!twitterTitleMetaTag) {
+      twitterTitleMetaTag = document.createElement('meta');
+      twitterTitleMetaTag.setAttribute('name', 'twitter:title');
+      head.appendChild(twitterTitleMetaTag);
+    }
+    twitterTitleMetaTag.setAttribute('content', bigText.value);
+
+    if (!twitterDescriptionMetaTag) {
+      twitterDescriptionMetaTag = document.createElement('meta');
+      twitterDescriptionMetaTag.setAttribute('name', 'twitter:description');
+      head.appendChild(twitterDescriptionMetaTag);
+    }
+    twitterDescriptionMetaTag.setAttribute('content', smallText.value);
+
+    if (!twitterImageMetaTag) {
+      twitterImageMetaTag = document.createElement('meta');
+      twitterImageMetaTag.setAttribute('name', 'twitter:image');
+      head.appendChild(twitterImageMetaTag);
+    }
+    twitterImageMetaTag.setAttribute('content', image.src);
+
+    console.log('Twitter card tags added successfully.');
+  });
+});
 </script>
 
 
