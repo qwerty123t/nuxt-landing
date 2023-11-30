@@ -10,7 +10,10 @@
                 <div class="rhomb blue"></div>
             </h3>
             <p>Netherlands, Worldwide</p>
-            <p class="duties first">Available for a project or job in UX/UI, Visual and Product design.</p>
+            <p class="duties first">
+                Available for a project or job in UX/UI, Visual and Product
+                design.
+            </p>
             <a href="#">Commercial tryouts</a>
             <a href="#">Personal projects</a>
         </article>
@@ -29,9 +32,13 @@
                     <h4>J Creative Solutions</h4>
                     <p>Digital agency in Minsk, Belarus</p>
                 </div>
-                
             </div>
-            <p class="duties second">Created visuals for digital marketing channels such as social media, promo web and online ads. Developed visual language from scratch or following the branding guidelines. Designed presentations<br>for clients and indoor purposes.</p>
+            <p class="duties second">
+                Created visuals for digital marketing channels such as social
+                media, promo web and online ads. Developed visual language from
+                scratch or following the branding guidelines. Designed
+                presentations<br />for clients and indoor purposes.
+            </p>
             <a href="#">Agency projects</a>
         </article>
 
@@ -51,7 +58,14 @@
                     <p>Online bookstore in Minsk, Belarus</p>
                 </div>
             </div>
-            <p class="duties">Improved website performance and user experience of the biggest online bookstore OZ in Belarus, being a part of the marketing team,<br/>I interpreted Google Analytics data to IT, content and marketing colleagues. Advised on tech and content optimization strategy, automated processes, provided reports, increased organic traffic up to 150%.</p>
+            <p class="duties">
+                Improved website performance and user experience of the biggest
+                online bookstore OZ in Belarus, being a part of the marketing
+                team,<br />I interpreted Google Analytics data to IT, content
+                and marketing colleagues. Advised on tech and content
+                optimization strategy, automated processes, provided reports,
+                increased organic traffic up to 150%.
+            </p>
             <a href="#">Annual company report 2016</a>
         </article>
 
@@ -70,7 +84,12 @@
                     <p>E-commerce store in Minsk, Belarus</p>
                 </div>
             </div>
-            <p class="duties">Added and modified the product information, prepared images and text for the website, developed categories filters, ensure all info is correct in the catalogue with the goal of improving online shopper experience.</p>
+            <p class="duties">
+                Added and modified the product information, prepared images and
+                text for the website, developed categories filters, ensure all
+                info is correct in the catalogue with the goal of improving
+                online shopper experience.
+            </p>
         </article>
 
         <article>
@@ -80,7 +99,6 @@
                     Software Support Engineer
                     <div class="rhomb green"></div>
                 </h3>
-                
             </div>
             <div class="company last">
                 <img :src="integral" alt="integral" />
@@ -89,7 +107,10 @@
                     <p>Microelectronics factory in Minsk, Belarus</p>
                 </div>
             </div>
-            <p class="duties">Supported retail accounting system LS Trade, troubleshoot technical problems.</p>
+            <p class="duties">
+                Supported retail accounting system LS Trade, troubleshoot
+                technical problems.
+            </p>
         </article>
 
         <img :src="float" class="floating-guy" alt="" />
@@ -97,247 +118,246 @@
 </template>
 
 <script setup>
-    import jcs from '@/assets/images/jcs.jpg';
-    import oz from '@/assets/images/oz.jpg';
-    import vek from '@/assets/images/21vek.jpg';
-    import integral from '@/assets/images/integral.svg';
-    import float from '@/assets/images/float.png';
+import jcs from '@/assets/images/jcs.jpg';
+import oz from '@/assets/images/oz.jpg';
+import vek from '@/assets/images/21vek.jpg';
+import integral from '@/assets/images/integral.svg';
+import float from '@/assets/images/float.png';
 </script>
 
 <style scoped lang="scss">
+section {
+    display: flex;
+    flex-direction: column;
+    margin-top: calc(-26.5px * 100vw / 375px);
+
+    h2 {
+        font-size: calc(20px * 100vw / 375px);
+        font-weight: 700;
+    }
+
+    article {
+        margin-top: calc(58px * 100vw / 375px);
+
+        time {
+            color: #828282;
+            font-size: calc(14px * 100vw / 375px);
+            display: block;
+            margin-top: calc(2px * 100vw / 375px);
+        }
+
+        h3 {
+            margin-top: calc(8px * 100vw / 375px);
+            font-size: calc(14px * 100vw / 375px);
+            font-weight: 700;
+            position: relative;
+            display: inline-block;
+
+            .rhomb {
+                position: absolute;
+                top: calc(3px * 100vw / 375px);
+                right: calc(-22px * 100vw / 375px);
+                width: calc(12px * 100vw / 375px);
+                aspect-ratio: 1;
+                border-radius: calc(2px * 100vw / 375px);
+                z-index: 2;
+                transform: rotate(45deg);
+
+                &:nth-child(2) {
+                    right: calc(-31px * 100vw / 375px);
+                    z-index: 1;
+                }
+                &:nth-child(3) {
+                    right: calc(-40px * 100vw / 375px);
+                    z-index: 0;
+                }
+            }
+            .purple {
+                background: linear-gradient(45deg, #aea9fe 50%, #938df8 50%);
+            }
+            .yellow {
+                background: linear-gradient(45deg, #ffe975 50%, #ffcf41 50%);
+            }
+            .blue {
+                background: linear-gradient(45deg, #77c9fb 50%, #4ebff3 50%);
+            }
+            .pink {
+                background: linear-gradient(45deg, #fe73a5 50%, #ef5389 50%);
+            }
+            .green {
+                background: linear-gradient(45deg, #64ddba 50%, #3fc59d 50%);
+            }
+            .orange {
+                background: linear-gradient(45deg, #ffbb87 50%, #ffa35c 50%);
+            }
+        }
+
+        p {
+            font-size: calc(14px * 100vw / 375px);
+            margin-top: calc(8px * 100vw / 375px);
+        }
+
+        .duties {
+            line-height: 143%;
+            margin-top: calc(8px * 100vw / 375px);
+        }
+
+        .first {
+            line-height: 120%;
+        }
+        .second {
+            margin-top: calc(5px * 100vw / 375px);
+        }
+
+        a {
+            display: block;
+            color: #2f80ed;
+            text-decoration: underline;
+            text-underline-offset: calc(2px * 100vw / 375px);
+            text-decoration-skip-ink: none;
+            font-size: calc(14px * 100vw / 375px);
+            margin-top: calc(3.8px * 100vw / 375px);
+        }
+
+        .company {
+            display: flex;
+            margin-top: calc(8px * 100vw / 375px);
+
+            img {
+                width: calc(30px * 100vw / 375px);
+                height: calc(30px * 100vw / 375px);
+                border-radius: 50%;
+            }
+            .company-text {
+                display: flex;
+                //flex-direction: column;
+                flex-wrap: wrap;
+                margin-left: calc(8px * 100vw / 375px);
+                margin-top: auto;
+                margin-bottom: auto;
+
+                h4 {
+                    font-size: calc(14px * 100vw / 375px);
+                    font-weight: 700;
+                    margin-right: calc(9px * 100vw / 375px);
+                }
+                p {
+                    margin-top: 0;
+                }
+            }
+
+            &.last {
+                width: 102%;
+            }
+        }
+    }
+
+    .first {
+        margin-top: calc(18px * 100vw / 375px);
+    }
+
+    .floating-guy {
+        margin: calc(39px * 100vw / 375px) auto 0 auto;
+        width: calc(200px * 100vw / 375px);
+    }
+}
+
+@container (width > 810px) {
     section {
-        display: flex;
-        flex-direction: column;
-        margin-top: calc(-26.5px * 100vw / 375px);
-        
+        position: relative;
+        margin-top: calc(-66px * 100cqw / 1140px);
+
         h2 {
-            font-size: calc(20px * 100vw / 375px);
+            font-size: calc(24px * 100cqw / 1140px);
             font-weight: 700;
         }
 
         article {
-            margin-top: calc(58px * 100vw / 375px);
+            margin-top: calc(59px * 100cqw / 1140px);
 
             time {
-                color: #828282;
-                font-size: calc(14px * 100vw / 375px);
-                display: block;
-                margin-top: calc(2px * 100vw / 375px);
+                margin-top: calc(0px * 100cqw / 1140px);
+                font-size: calc(14px * 100cqw / 1140px);
             }
 
             h3 {
-                margin-top: calc(8px * 100vw / 375px);
-                font-size: calc(14px * 100vw / 375px);
-                font-weight: 700;
-                position: relative;
-                display: inline-block; 
-                
+                margin-top: calc(8.5px * 100cqw / 1140px);
+                font-size: calc(14px * 100cqw / 1140px);
                 .rhomb {
-                    position: absolute;
-                    top: calc(3px * 100vw / 375px);
-                    right: calc(-22px * 100vw / 375px);
-                    width: calc(12px * 100vw / 375px);
-                    aspect-ratio: 1;
-                    border-radius: calc(2px * 100vw / 375px);
-                    z-index: 2;
-                    transform: rotate(45deg);
+                    top: calc(3px * 100cqw / 1140px);
+                    right: calc(-5.8px * 100vw / 375px);
+                    width: calc(12px * 100cqw / 1140px);
+                    height: calc(12px * 100cqw / 1140px);
+                    border-radius: calc(2px * 100cqw / 1140px);
 
                     &:nth-child(2) {
-                        right: calc(-31px * 100vw / 375px);
-                        z-index: 1;
+                        right: calc(-8.2px * 100vw / 375px);
                     }
                     &:nth-child(3) {
-                        right: calc(-40px * 100vw / 375px);
-                        z-index: 0;
+                        right: calc(-10.5px * 100vw / 375px);
                     }
-                    
-                } 
-                .purple {
-                    background: linear-gradient(45deg, #AEA9FE 50%, #938DF8 50%);
                 }
-                .yellow {
-                    background: linear-gradient(45deg, #FFE975 50%, #FFCF41 50%);
-                }
-                .blue {
-                    background: linear-gradient(45deg, #77C9FB 50%, #4EBFF3 50%);
-                }
-                .pink {
-                    background: linear-gradient(45deg, #FE73A5 50%, #EF5389 50%);
-                }         
-                .green {
-                    background: linear-gradient(45deg, #64DDBA 50%, #3FC59D 50%);
-                }
-                .orange {
-                    background: linear-gradient(45deg, #FFBB87 50%, #FFA35C 50%);
-                }
+            }
+            .seo {
+                font-size: calc(14.1px * 100cqw / 1140px);
             }
 
             p {
-                font-size: calc(14px * 100vw / 375px);
-                margin-top: calc(8px * 100vw / 375px);
+                margin-top: calc(8px * 100cqw / 1140px);
+                font-size: calc(14px * 100cqw / 1140px);
             }
 
             .duties {
-                line-height: 143%;
-                margin-top: calc(8px * 100vw / 375px);
+                margin-top: calc(8px * 100cqw / 1140px);
+                width: calc(560px * 100cqw / 1140px);
             }
-            
             .first {
-                line-height: 120%;
+                margin-top: calc(7px * 100cqw / 1140px);
             }
             .second {
-                margin-top: calc(5px * 100vw / 375px);
+                margin-top: calc(9px * 100cqw / 1140px);
             }
 
             a {
-                display: block;
-                color: #2F80ED;
-                text-decoration: underline;
-                text-underline-offset: calc(2px * 100vw / 375px);
-                text-decoration-skip-ink: none;
-                font-size: calc(14px * 100vw / 375px);
-                margin-top: calc(3.8px * 100vw / 375px);
+                margin-top: calc(1px * 100cqw / 1140px);
+                font-size: calc(14px * 100cqw / 1140px);
+                text-underline-offset: calc(2px * 100cqw / 1140px);
+                line-height: 130%;
             }
 
             .company {
-                display: flex;
-                margin-top: calc(8px * 100vw / 375px);
+                margin-top: calc(8px * 100cqw / 1140px);
 
                 img {
-                    width: calc(30px * 100vw / 375px);
-                    height: calc(30px * 100vw / 375px);
-                    border-radius: 50%;
+                    width: calc(30px * 100cqw / 1140px);
+                    height: calc(30px * 100cqw / 1140px);
                 }
                 .company-text {
-                    display: flex;
-                    //flex-direction: column;
-                    flex-wrap: wrap;
-                    margin-left: calc(8px * 100vw / 375px);
-                    margin-top: auto;
-                    margin-bottom: auto;
+                    margin-left: calc(8px * 100cqw / 1140px);
 
                     h4 {
-                        font-size: calc(14px * 100vw / 375px);
-                        font-weight: 700;
-                        margin-right: calc(9px * 100vw / 375px);
-                    }  
+                        font-size: calc(14px * 100cqw / 1140px);
+                        margin-right: calc(8px * 100cqw / 1140px);
+                    }
                     p {
                         margin-top: 0;
+                        font-size: calc(14px * 100cqw / 1140px);
                     }
-                }
-                
-                &.last {
-                    width: 102%;
                 }
             }
         }
-        
+
         .first {
-            margin-top: calc(18px * 100vw / 375px);
+            margin-top: calc(29px * 100cqw / 1140px);
         }
 
         .floating-guy {
-            margin: calc(39px * 100vw / 375px) auto 0 auto;
-            width: calc(200px * 100vw / 375px);
+            position: absolute;
+            top: calc(-1px * 100cqw / 1140px);
+            left: calc(464.5px * 100cqw / 1140px);
+            margin-top: 0;
+            width: calc(500px * 100cqw / 1140px);
         }
     }
-
-    @container  (width > 810px) {
-        section {
-            position: relative;
-            margin-top: calc(-66px * 100cqw / 1140px);
-
-            h2 {
-                font-size: calc(24px * 100cqw / 1140px);
-                font-weight: 700;
-            }
-
-            article {
-                margin-top: calc(59px * 100cqw / 1140px);
-
-                time {
-                    margin-top: calc(0px * 100cqw / 1140px);
-                    font-size: calc(14px * 100cqw / 1140px);
-                }
-
-                h3 {
-                    margin-top: calc(8.5px * 100cqw / 1140px);
-                    font-size: calc(14px * 100cqw / 1140px);
-                    .rhomb {
-                        top: calc(3px * 100cqw / 1140px);
-                        right: calc(-5.8px * 100vw / 375px);
-                        width: calc(12px * 100cqw / 1140px);
-                        height: calc(12px * 100cqw / 1140px);
-                        border-radius: calc(2px * 100cqw / 1140px);
-
-                        &:nth-child(2) {
-                            right: calc(-8.2px * 100vw / 375px);
-                        }
-                        &:nth-child(3) {
-                            right: calc(-10.5px * 100vw / 375px);
-                        }
-                    }
-                }
-                .seo {
-                    font-size: calc(14.1px * 100cqw / 1140px);
-                }
-
-                p {
-                    margin-top: calc(8px * 100cqw / 1140px);
-                    font-size: calc(14px * 100cqw / 1140px);
-                }
-
-                .duties {
-                    margin-top: calc(8px * 100cqw / 1140px);
-                    width: calc(560px * 100cqw / 1140px);
-                }
-                .first {
-                    margin-top: calc(7px * 100cqw / 1140px);
-                }
-                .second {
-                    margin-top: calc(9px * 100cqw / 1140px);
-                }
-
-                a {
-                    margin-top: calc(1px * 100cqw / 1140px);
-                    font-size: calc(14px * 100cqw / 1140px); 
-                    text-underline-offset: calc(2px * 100cqw / 1140px);
-                    line-height: 130%;
-                }
-
-                .company {
-                    margin-top: calc(8px * 100cqw / 1140px);
-
-                    img {
-                        width: calc(30px * 100cqw / 1140px);
-                        height: calc(30px * 100cqw / 1140px);
-                    }
-                    .company-text {
-                        margin-left: calc(8px * 100cqw / 1140px);
-
-                        h4 {
-                            font-size: calc(14px * 100cqw / 1140px);
-                            margin-right: calc(8px * 100cqw / 1140px);
-                        }  
-                        p {
-                            margin-top: 0;
-                            font-size: calc(14px * 100cqw / 1140px);
-                        }
-                    }
-                }
-            }
-
-            .first {
-                margin-top: calc(29px * 100cqw / 1140px);
-            }
-
-            .floating-guy {
-                position: absolute;
-                top: calc(-1px * 100cqw / 1140px);
-                left: calc(464.5px * 100cqw / 1140px);
-                margin-top: 0;
-                width: calc(500px * 100cqw / 1140px);
-            }
-        }
-    }
+}
 </style>
