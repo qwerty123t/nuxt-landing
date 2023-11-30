@@ -1,14 +1,52 @@
 <template>
     <a href="#">
-        <img :src="arrow"  alt="" class="arrow"/>
+        <img id="arrow" :src="arrow"  alt="" class="arrow"/>
         <span id="number">0</span>
         <svg viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
-            <circle cx="50" cy="50" r="30" pathLength="1" class="stroke" id="stroke" />
+            <circle id="stroke" cx="50" cy="50" r="30" pathLength="1" class="stroke" />
         </svg>
     </a>
 </template>
 
+<script setup>
+    import { onMounted } from 'vue';
+    import { animate, scroll } from "motion";
+    import arrow from '@/assets/images/arrow.svg';
+
+
+    onMounted(() => {
+        animateOnScroll();
+    });
+
+    const animateOnScroll = () => {
+        const number = document.getElementById("number")
+        const arrow = document.getElementById("arrow")
+
+        scroll(
+            animate(
+                (progress) => {
+                    number.innerText = Math.round(progress * 100) + '%'; 
+
+                    if (progress > 0.99) {
+                        number.style.opacity = 0
+                        arrow.style.opacity = 1
+                    } else {
+                        number.style.opacity = 1
+                        arrow.style.opacity = 0
+                    }
+                },
+                { duration: 2, easing: "ease-out" }
+            )
+        );
+        scroll(
+            animate(
+                stroke, 
+                { strokeDasharray: ["0,1", "1,1"] }
+            )
+        );
+    }  
+</script>
 
 <style scoped lang="scss">
     a {
@@ -112,43 +150,3 @@
         }
     }
 </style>
-
-
-<script setup>
-    import { onMounted } from 'vue';
-    import { animate, scroll } from "motion";
-    import arrow from '@/assets/images/arrow.svg';
-
-
-    onMounted(() => {
-        animateOnScroll();
-    });
-
-    const animateOnScroll = () => {
-        const number = document.getElementById("number")
-        const arrow = document.getElementById("arrow")
-
-        scroll(
-            animate(
-                (progress) => {
-                    number.innerText = Math.round(progress * 100) + '%'; 
-
-                    if (progress > 0.99) {
-                        number.style.opacity = 0
-                        arrow.style.opacity = 1
-                    } else {
-                        number.style.opacity = 1
-                        arrow.style.opacity = 0
-                    }
-                },
-                { duration: 2, easing: "ease-out" }
-            )
-        );
-        scroll(
-            animate(
-                stroke, 
-                { strokeDasharray: ["0,1", "1,1"] }
-            )
-        );
-    }  
-</script>

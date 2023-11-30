@@ -13,9 +13,9 @@
         <p>г. Иннополис</p>
 
         <div class="icons">
-          <button @click="shareFacebook" target="_blank" id="fb"><img :src="fb" alt="Facebook" /></button>
-          <button @click="shareVK" target="_blank" id="vk"><img :src="vk" alt="VK" /></button>
-          <button @click="shareTelegram" target="_blank" id="tg"><img :src="tg" alt="Telegram" /></button>
+          <button id="fb" target="_blank" @click="shareFacebook"><img :src="fb" alt="Facebook" /></button>
+          <button id="vk" target="_blank" @click="shareVK"><img :src="vk" alt="VK" /></button>
+          <button id="tg" target="_blank" @click="shareTelegram"><img :src="tg" alt="Telegram" /></button>
         </div>
       </address>
 
@@ -44,16 +44,16 @@
   import shareImg from '@/assets/images/share.png';
 
   const url = 'https://nuxt-landing-three.vercel.app/'
-  let bigText = ref("Романов Кирилл, Фронтенд-разработчик");
-  let smallText = ref("Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.");
+  const bigText = ref("Романов Кирилл, Фронтенд-разработчик");
+  const smallText = ref("Как разработчик, я высоко ценю способность воплотить видение дизайнера в жизнь, что считаю очень полезным для бизнеса. Я получаю огромное удовлетворение, наблюдая за работой от идеи до дизайна, особенно когда она появляется в руках пользователя. Я считаю, что ориентированные на пользователя решения являются наиболее ценными цифровыми ресурсами будущего.");
 
   const updateBigText = (e) => {
-    bigText = e.target.innerText;
+    bigText.value = e.target.innerText;
     console.log(bigText);
   };
 
   const updateSmallText = (e) => {
-    smallText = e.target.innerText;
+    smallText.value = e.target.innerText;
     console.log(smallText);
   };
 

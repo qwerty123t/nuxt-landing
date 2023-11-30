@@ -13,6 +13,7 @@
         },
       ],
       'vue/no-multiple-template-root': 'off',
-      'no-undef': 'off',
+      'no-undef': 'off', 
+      'vue/multi-word-component-names': 'off',
     },
   }
