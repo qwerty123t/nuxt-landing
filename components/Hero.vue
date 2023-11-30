@@ -87,7 +87,7 @@ onMounted(() => {
       twitterCardMetaTag.setAttribute('name', 'twitter:card');
       head.appendChild(twitterCardMetaTag);
     }
-    twitterCardMetaTag.setAttribute('content', 'summary_large_image');
+    twitterCardMetaTag.setAttribute('content', image.src);
 
     if (!twitterTitleMetaTag) {
       twitterTitleMetaTag = document.createElement('meta');
