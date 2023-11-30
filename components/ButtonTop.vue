@@ -1,9 +1,10 @@
 <template>
     <a href="#">
+        <img :src="arrow"  id="arrow" alt="" class="arrow"/>
         <span id="number">0</span>
         <svg viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
-            <circle cx="50" cy="50" r="30" pathLength="1" class="progress" />
+            <circle cx="50" cy="50" r="30" pathLength="1" class="stroke" id="stroke" />
         </svg>
     </a>
 </template>
@@ -30,12 +31,22 @@
         cursor: pointer;
         transition: all 0.3s ease-in-out;
 
+        .arrow {
+            z-index: 6;
+            grid-column: 1 / -1;
+            grid-row: 1 / -1;
+            opacity: 1;
+            width: calc(12px * 100vw / 375px);   
+            transition: opacity 0.3s ease-in-out;
+        }
+
         span {
             z-index: 6;
             grid-column: 1 / -1;
             grid-row: 1 / -1;
             color: #282A33;
             font-size: calc(14px * 100vw / 375px);  
+            transition: opacity 0.3s ease-in-out;
         }
 
         svg {
@@ -62,7 +73,7 @@
             stroke: #282A33;
         }
 
-        .progress {
+        .stroke {
             stroke: #D2233C;
             stroke-dasharray: 0, 1;
         }
@@ -79,6 +90,9 @@
             right: 0;
             margin-right: calc(-132px * 100cqw / 1140px);
 
+            .arrow {
+                width: calc(20px * 100cqw / 1140px);
+            }
             span {
                 font-size: calc(14px * 100cqw / 1140px);
             }
@@ -101,8 +115,10 @@
 
 
 <script setup>
-    import { onMounted } from 'vue';
+    import { onMounted, ref } from 'vue';
     import { animate, scroll } from "motion";
+    import arrow from '@/assets/images/arrow.svg';
+
 
     onMounted(() => {
         animateOnScroll();
@@ -110,19 +126,29 @@
 
     const animateOnScroll = () => {
         const number = document.getElementById("number")
+        const arrow = document.getElementById("arrow")
 
         scroll(
             animate(
-                (progress) => number.innerText = Math.round(progress * 100) + '%',
+                (progress) => {
+                    number.innerText = Math.round(progress * 100) + '%'; 
+
+                    if (progress > 0.99) {
+                        number.style.opacity = 0
+                        arrow.style.opacity = 1
+                    } else {
+                        number.style.opacity = 1
+                        arrow.style.opacity = 0
+                    }
+                },
                 { duration: 2, easing: "ease-out" }
             )
         );
         scroll(
             animate(
-                ".progress", 
+                stroke, 
                 { strokeDasharray: ["0,1", "1,1"] }
             )
         );
-
     }  
 </script>
