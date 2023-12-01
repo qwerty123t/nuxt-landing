@@ -4,7 +4,7 @@
         <li class="first" @click="closeMenu"><a href="#resume">Резюме</a></li>
         <li @click="closeMenu"><a href="#aboutMe">О себе</a></li>
         <li class="last" @click="closeMenu"><a href="#skills">Навыки</a></li>
-        
+
         <button @click="closeMenu">
             <img :src="close" class="close" alt="" />
         </button>
@@ -20,15 +20,15 @@ import hourglass from '@/assets/images/hourglass.png';
 import { animate } from 'motion';
 
 const closeMenu = () => {
-    const menu = document.getElementById('menu')
+    const menu = document.getElementById('menu');
     document.body.style.overflowY = 'visible';
 
     animate(
         menu,
-        { transform: ["translateX(0)", "translateX(100%)"] },
-        { duration: 0.3, easing: 'ease-out' }
-    )
-}
+        { transform: ['translateX(0)', 'translateX(100%)'] },
+        { duration: 0.3, easing: 'ease-out' },
+    );
+};
 </script>
 
 <style scoped lang="scss">
@@ -37,7 +37,7 @@ ul {
     position: absolute;
     display: flex;
     flex-direction: column;
-    background-color: #FAFAFA;
+    background-color: #fafafa;
     width: 100%;
     height: 130vh;
     height: 100lvh;
@@ -58,7 +58,7 @@ ul {
     .first {
         margin-top: calc(41px * 100vw / 375px);
     }
-    
+
     .line {
         width: 10%;
         position: absolute;

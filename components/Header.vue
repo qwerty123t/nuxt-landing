@@ -21,15 +21,15 @@ import line from '@/assets/images/lineHeader.svg';
 import { animate } from 'motion';
 
 const showMenu = () => {
-    const menu = document.getElementById('menu')
+    const menu = document.getElementById('menu');
     document.body.style.overflowY = 'hidden';
 
     animate(
         menu,
-        { transform: ["translateX(100%)", "translateX(0)"] },
-        { duration: 0.3, easing: 'ease-out' }
-    )
-}
+        { transform: ['translateX(100%)', 'translateX(0)'] },
+        { duration: 0.3, easing: 'ease-out' },
+    );
+};
 </script>
 
 <style scoped lang="scss">

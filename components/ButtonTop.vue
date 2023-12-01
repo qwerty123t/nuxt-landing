@@ -116,7 +116,7 @@ a {
     }
 
     .bg {
-        fill: #FAFAFA;
+        fill: #fafafa;
         stroke: #282a33;
     }
 

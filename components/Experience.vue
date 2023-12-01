@@ -133,14 +133,11 @@ const animateOnScroll = () => {
     const floatingGuy = document.getElementById('floatingGuy');
 
     scroll(
-        animate(
-            floatingGuy,
-            { 
-                transform: ["translateY(0)", "translateY(-10vw)"],
-                target: floatingGuy, 
-                offset: ["start end", "end end"]  
-            },
-        )
+        animate(floatingGuy, {
+            transform: ['translateY(0)', 'translateY(-10vw)'],
+            target: floatingGuy,
+            offset: ['start end', 'end end'],
+        }),
     );
 };
 </script>

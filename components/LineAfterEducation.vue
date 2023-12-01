@@ -16,14 +16,11 @@ const animateOnScroll = () => {
     const line = document.getElementById('line');
 
     scroll(
-        animate(
-            line,
-            { 
-                transform: ["translateY(200px)", "translateY(0)"],
-                target: line, 
-                offset: ["start end", "end end"] 
-            },
-        )
+        animate(line, {
+            transform: ['translateY(200px)', 'translateY(0)'],
+            target: line,
+            offset: ['start end', 'end end'],
+        }),
     );
 };
 </script>

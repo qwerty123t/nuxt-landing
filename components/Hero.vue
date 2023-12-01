@@ -115,7 +115,6 @@ const takeScreenshotAndShare = (shareLink) => {
     });
 };
 
-
 onMounted(() => {
     animateOnScroll();
 });
@@ -124,10 +123,9 @@ const animateOnScroll = () => {
     const lineBig = document.getElementById('lineBig');
 
     scroll(
-        animate(
-            lineBig,
-            { transform: ["translateY(0)", "translateY(-300px)"] },
-        )
+        animate(lineBig, {
+            transform: ['translateY(0)', 'translateY(-300px)'],
+        }),
     );
 };
 </script>
