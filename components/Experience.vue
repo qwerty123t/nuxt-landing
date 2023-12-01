@@ -113,7 +113,7 @@
             </p>
         </article>
 
-        <img :src="float" id="floatingGuy" class="floating-guy" alt="" />
+        <img id="floatingGuy" :src="float" class="floating-guy" alt="" />
     </section>
 </template>
 

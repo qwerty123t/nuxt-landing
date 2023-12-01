@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="line" id="line" alt="" class="line-experience" />
+        <img id="line" :src="line" alt="" class="line-experience" />
     </div>
 </template>
 

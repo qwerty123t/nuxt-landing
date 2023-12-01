@@ -1,9 +1,9 @@
 <template>
     <ul id="menu">
         <img :src="line" class="line" alt="" />
-        <li @click="closeMenu" class="first"><a href="#resume">Резюме</a></li>
+        <li class="first" @click="closeMenu"><a href="#resume">Резюме</a></li>
         <li @click="closeMenu"><a href="#aboutMe">О себе</a></li>
-        <li @click="closeMenu" class="last"><a href="#skills">Навыки</a></li>
+        <li class="last" @click="closeMenu"><a href="#skills">Навыки</a></li>
         
         <button @click="closeMenu">
             <img :src="close" class="close" alt="" />

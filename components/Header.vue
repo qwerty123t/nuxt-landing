@@ -1,7 +1,7 @@
 <template>
     <header>
         <img :src="logo" class="logo" alt="logo" />
-        <button @click="showMenu" class="burger">
+        <button class="burger" @click="showMenu">
             <div></div>
             <div></div>
             <div></div>

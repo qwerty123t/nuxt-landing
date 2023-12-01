@@ -24,7 +24,7 @@
         </address>
 
         <img :src="lineSmall" class="line-small" alt="" />
-        <img :src="lineBig" id="lineBig" class="line-big" alt="" />
+        <img id="lineBig" :src="lineBig" class="line-big" alt="" />
 
         <article id="capture">
             <div class="text">
