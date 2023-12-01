@@ -217,6 +217,7 @@ section {
             text-decoration-skip-ink: none;
             font-size: calc(14px * 100vw / 375px);
             margin-top: calc(3.8px * 100vw / 375px);
+            cursor: pointer;
         }
 
         .company {

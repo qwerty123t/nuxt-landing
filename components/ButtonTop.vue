@@ -1,7 +1,7 @@
 <template>
     <a href="#">
         <img id="arrow" :src="arrow" alt="" class="arrow" />
-        <span id="number">0</span>
+        <span id="span"><span id="number" class="number">0</span>%</span>
         <svg viewBox="0 0 100 100">
             <circle cx="50" cy="50" r="30" pathLength="1" class="bg" />
             <circle
@@ -26,19 +26,20 @@ onMounted(() => {
 });
 
 const animateOnScroll = () => {
+    const span = document.getElementById('span');
     const number = document.getElementById('number');
     const arrow = document.getElementById('arrow');
 
     scroll(
         animate(
             (progress) => {
-                number.innerText = Math.round(progress * 100) + '%';
+                number.innerText = Math.round(progress * 100);
 
                 if (progress > 0.99) {
-                    number.style.opacity = 0;
+                    span.style.opacity = 0;
                     arrow.style.opacity = 1;
                 } else {
-                    number.style.opacity = 1;
+                    span.style.opacity = 1;
                     arrow.style.opacity = 0;
                 }
             },
@@ -53,7 +54,7 @@ const animateOnScroll = () => {
 a {
     position: sticky;
     margin-left: auto;
-    top: calc(100lvh - calc(60px * 100vw / 375px));
+    top: calc(100lvh - calc(80px * 100vw / 375px));
     right: 0;
     margin-right: calc(-18px * 100vw / 375px);
     width: calc(65px * 100vw / 375px);
@@ -88,6 +89,12 @@ a {
         transition: opacity 0.3s ease-in-out;
     }
 
+    @media (width < 374px) {
+        span {
+            font-size: calc(10px * 100vw / 375px);
+        }
+    }
+
     svg {
         position: fixed;
         position: sticky;
@@ -109,6 +116,7 @@ a {
     }
 
     .bg {
+        fill: #FAFAFA;
         stroke: #282a33;
     }
 
@@ -132,6 +140,13 @@ a {
         }
         span {
             font-size: calc(14px * 100cqw / 1140px);
+
+            .number {
+                // чтобы символ процента не прыгал при изменении ширины числа
+                display: inline-block;
+                width: calc(17px * 100cqw / 1140px);
+                text-align: center;
+            }
         }
 
         svg {
