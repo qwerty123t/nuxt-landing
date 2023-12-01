@@ -1,12 +1,12 @@
 <template>
     <header>
-        <img :src="logo" class="logo" alt="Rocket preloader" />
-        <button>
+        <img :src="logo" class="logo" alt="logo" />
+        <button @click="showMenu" class="burger">
             <div></div>
             <div></div>
             <div></div>
         </button>
-        <ul>
+        <ul id="menu">
             <img :src="line" class="line" alt="" />
             <li class="first"><a href="#resume">Резюме</a></li>
             <li><a href="#aboutMe">О себе</a></li>
@@ -18,6 +18,18 @@
 <script setup>
 import logo from '@/assets/images/logo.png';
 import line from '@/assets/images/lineHeader.svg';
+import { animate } from 'motion';
+
+const showMenu = () => {
+    const menu = document.getElementById('menu')
+    document.body.style.overflow = 'hidden';
+
+    animate(
+        menu,
+        { transform: ["translateX(100%)", "translateX(0)"] },
+        { duration: 0.3, easing: 'ease-out' }
+    )
+}
 </script>
 
 <style scoped lang="scss">
@@ -25,13 +37,14 @@ header {
     margin: calc(-51px * 100% / 375px) auto 0; // 20px
     display: flex;
     justify-content: space-between;
+    position: relative;
 
     .logo {
         width: calc(80px * 100vw / 375px); // 80px
         aspect-ratio: 1;
     }
 
-    button {
+    .burger {
         width: calc(60px * 100vw / 375px); // 60px
         height: calc(60px * 100vw / 375px); // 60px
         aspect-ratio: 1;
@@ -65,7 +78,11 @@ header {
             aspect-ratio: 1;
         }
 
-        button {
+        .burger {
+            display: none;
+        }
+
+        .close {
             display: none;
         }
 

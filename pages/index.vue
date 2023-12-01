@@ -14,6 +14,7 @@
         />
     </Head>
     <Preloader />
+    <Menu />
     <div class="container">
         <ButtonTop />
         <Header />
@@ -27,6 +28,7 @@
 
 <script setup>
 import Preloader from '~/components/Preloader.vue';
+import Menu from '~/components/Menu.vue';
 import ButtonTop from '~/components/ButtonTop.vue';
 import Header from '~/components/Header.vue';
 import Hero from '~/components/Hero.vue';
@@ -34,10 +36,6 @@ import ExperienceAndEducation from '~/components/ExperienceAndEducation.vue';
 import LineAfterEducation from '~/components/LineAfterEducation.vue';
 import Skills from '~/components/Skills.vue';
 import Hands from '~/components/Hands.vue';
-
-// useHead({
-//     meta: [{name: "description", content: "sdfdsf"}, {property: "og:title", content: "this is og title"}]
-// })
 </script>
 
 <style lang="scss">
