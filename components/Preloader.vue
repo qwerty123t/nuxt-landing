@@ -82,6 +82,7 @@ function fromMillisecondsToSeconds(ms) {
 <style scoped lang="scss">
 div {
     position: absolute;
+    position: fixed;
     opacity: 1;
     z-index: 6;
     width: 100%;
