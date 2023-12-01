@@ -123,6 +123,8 @@ section {
 
     .text {
         margin-top: calc(30px * 100vw / 375px);
+        text-wrap: balance;
+
         h1 {
             font-size: calc(28px * 100vw / 375px);
             font-weight: 700;
