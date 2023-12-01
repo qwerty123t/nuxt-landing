@@ -22,7 +22,7 @@ import { animate } from 'motion';
 
 const showMenu = () => {
     const menu = document.getElementById('menu')
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflowY = 'hidden';
 
     animate(
         menu,

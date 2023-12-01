@@ -84,6 +84,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     background-color: #fafafa;
     color: #282a33;
     font-family:

@@ -24,7 +24,7 @@
         </address>
 
         <img :src="lineSmall" class="line-small" alt="" />
-        <img :src="lineBig" class="line-big" alt="" />
+        <img :src="lineBig" id="lineBig" class="line-big" alt="" />
 
         <article id="capture">
             <div class="text">
@@ -47,6 +47,7 @@
 <script setup>
 import html2canvas from 'html2canvas';
 import { ref } from 'vue';
+import { animate, scroll } from 'motion';
 import fb from '@/assets/images/bb.svg';
 import vk from '@/assets/images/vk.svg';
 import tg from '@/assets/images/tg.svg';
@@ -112,6 +113,22 @@ const takeScreenshotAndShare = (shareLink) => {
 
         window.open(shareLink, '_blank');
     });
+};
+
+
+onMounted(() => {
+    animateOnScroll();
+});
+
+const animateOnScroll = () => {
+    const lineBig = document.getElementById('lineBig');
+
+    scroll(
+        animate(
+            lineBig,
+            { transform: ["translateY(0)", "translateY(-300px)"] },
+        )
+    );
 };
 </script>
 

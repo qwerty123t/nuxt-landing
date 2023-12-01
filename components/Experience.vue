@@ -113,7 +113,7 @@
             </p>
         </article>
 
-        <img :src="float" class="floating-guy" alt="" />
+        <img :src="float" id="floatingGuy" class="floating-guy" alt="" />
     </section>
 </template>
 
@@ -123,6 +123,26 @@ import oz from '@/assets/images/oz.jpg';
 import vek from '@/assets/images/21vek.jpg';
 import integral from '@/assets/images/integral.svg';
 import float from '@/assets/images/float.png';
+import { animate, scroll } from 'motion';
+
+onMounted(() => {
+    animateOnScroll();
+});
+
+const animateOnScroll = () => {
+    const floatingGuy = document.getElementById('floatingGuy');
+
+    scroll(
+        animate(
+            floatingGuy,
+            { 
+                transform: ["translateY(0)", "translateY(-10vw)"],
+                target: floatingGuy, 
+                offset: ["start end", "end end"]  
+            },
+        )
+    );
+};
 </script>
 
 <style scoped lang="scss">

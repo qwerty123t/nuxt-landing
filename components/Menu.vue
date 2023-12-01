@@ -21,7 +21,7 @@ import { animate } from 'motion';
 
 const closeMenu = () => {
     const menu = document.getElementById('menu')
-    document.body.style.overflow = 'visible';
+    document.body.style.overflowY = 'visible';
 
     animate(
         menu,
@@ -53,6 +53,7 @@ ul {
 
     li {
         margin-top: calc(40px * 100vw / 375px);
+        cursor: pointer;
     }
     .first {
         margin-top: calc(41px * 100vw / 375px);
@@ -78,6 +79,7 @@ ul {
         width: calc(463.67px * 100vw / 375px);
         margin-top: calc(-33px * 100vw / 375px);
         margin-left: calc(-93px * 100vw / 375px);
+        pointer-events: none;
     }
 }
 </style>
