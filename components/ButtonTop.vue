@@ -54,6 +54,7 @@ const animateOnScroll = () => {
 a {
     position: sticky;
     margin-left: auto;
+    top: calc(100vh - calc(80px * 100vw / 375px));
     top: calc(100lvh - calc(80px * 100vw / 375px));
     right: 0;
     margin-right: calc(-18px * 100vw / 375px);

@@ -63,12 +63,10 @@ const smallText = ref(
 
 const updateBigText = (e) => {
     bigText.value = e.target.innerText;
-    console.log(bigText);
 };
 
 const updateSmallText = (e) => {
     smallText.value = e.target.innerText;
-    console.log(smallText);
 };
 
 const shareFacebook = () => {
@@ -172,12 +170,19 @@ section {
 
         .icons {
             display: flex;
-            margin-top: calc(5.5px * 100vw / 375px);
+            margin-top: calc(15px * 100vw / 375px);
 
-            img {
+            button {
+                display: flex;
                 width: calc(25px * 100vw / 375px);
+                height: calc(25px * 100vw / 375px);
                 margin-right: calc(20px * 100vw / 375px);
                 cursor: pointer;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
@@ -240,10 +245,11 @@ section {
 
             .icons {
                 display: flex;
-                margin-top: calc(4px * 100cqw / 1140px);
+                margin-top: calc(14px * 100cqw / 1140px);
 
-                img {
+                button {
                     width: calc(25px * 100cqw / 1140px);
+                    height: calc(25px * 100cqw / 1140px);
                     aspect-ratio: 1;
                     margin-right: calc(20px * 100cqw / 1140px);
                 }
