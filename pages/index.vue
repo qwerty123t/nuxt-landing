@@ -81,6 +81,7 @@ import Hands from '~/components/Hands.vue';
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 100px;
+    overflow-x: hidden;
 }
 
 body {
@@ -103,6 +104,7 @@ body {
     width: calc(335px * 100% / 375px); // = 89.33%
     max-width: 810px; // 79.16% от 1024px
     margin: 0 auto;
+    overflow-x: hidden;
 }
 
 @media (width >= 1025px) {
