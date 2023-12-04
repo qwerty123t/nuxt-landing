@@ -35,7 +35,7 @@ const animateOnScroll = () => {
             (progress) => {
                 number.innerText = Math.round(progress * 100);
 
-                if (progress > 0.99) {
+                if (progress >= 0.97) {
                     span.style.opacity = 0;
                     arrow.style.opacity = 1;
                 } else {
@@ -43,7 +43,7 @@ const animateOnScroll = () => {
                     arrow.style.opacity = 0;
                 }
             },
-            { duration: 2, easing: 'ease-out' },
+            { duration: 0.3, easing: 'ease-out' },
         ),
     );
     scroll(animate(stroke, { strokeDasharray: ['0,1', '1,1'] }));
