@@ -11,13 +11,13 @@
             <p>г. Иннополис</p>
 
             <div class="icons">
-                <button id="fb" target="_blank" @click="shareFacebook">
+                <button id="fb" @click="shareFacebook">
                     <img :src="fb" alt="Facebook" />
                 </button>
-                <button id="vk" target="_blank" @click="shareVK">
+                <button id="vk" @click="shareVK">
                     <img :src="vk" alt="VK" />
                 </button>
-                <button id="tg" target="_blank" @click="shareTelegram">
+                <button id="tg" @click="shareTelegram">
                     <img :src="tg" alt="Telegram" />
                 </button>
             </div>
@@ -28,7 +28,7 @@
 
         <article id="capture">
             <div class="text">
-                <p class="name">Романов Кирилл, Фронтенд-разработчик</p>
+                <h3 class="name">Романов Кирилл, Фронтенд-разработчик</h3>
                 <p class="description">
                     Как разработчик, я высоко ценю способность воплотить видение
                     дизайнера в жизнь, что считаю очень полезным для бизнеса. Я

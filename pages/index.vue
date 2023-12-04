@@ -1,5 +1,5 @@
 <template>
-    <Head>
+    <Head lang="ru">
         <Title>Тестовое</Title>
         <Meta
             name="description"

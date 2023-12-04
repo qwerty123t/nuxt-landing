@@ -2,4 +2,11 @@
 export default defineNuxtConfig({
     devtools: { enabled: true },
     modules: ['@nuxtjs/eslint-module'],
+    app: {
+        head: {
+            htmlAttrs: {
+                lang: 'ru'
+            }
+        }
+    }
 });

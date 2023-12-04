@@ -6,12 +6,12 @@
             <div></div>
             <div></div>
         </button>
-        <ul id="menu">
+        <div class="menu">
             <img :src="line" class="line" alt="" />
-            <li class="first"><a href="#resume">Резюме</a></li>
-            <li><a href="#aboutMe">О себе</a></li>
-            <li class="last"><a href="#skills">Навыки</a></li>
-        </ul>
+            <div class="first"><a href="#resume">Резюме</a></div>
+            <div><a href="#aboutMe">О себе</a></div>
+            <div class="last"><a href="#skills">Навыки</a></div>
+        </div>
     </header>
 </template>
 
@@ -63,7 +63,7 @@ header {
         }
     }
 
-    ul {
+    .menu {
         display: none;
     }
 }
@@ -87,7 +87,7 @@ header {
             display: none;
         }
 
-        ul {
+        .menu {
             display: flex;
             list-style-type: none;
             font-size: calc(18px * 100cqw / 1140px);
@@ -95,7 +95,7 @@ header {
             position: relative;
             margin-top: calc(0px * 100cqw / 1140px);
 
-            li {
+            div {
                 margin-right: calc(30px * 100cqw / 1140px); // 30px
                 z-index: 1;
                 cursor: pointer;

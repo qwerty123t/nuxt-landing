@@ -1,16 +1,16 @@
 <template>
-    <ul id="menu">
+    <nav id="menu">
         <img :src="line" class="line" alt="" />
-        <li class="first" @click="closeMenu"><a href="#resume">Резюме</a></li>
-        <li @click="closeMenu"><a href="#aboutMe">О себе</a></li>
-        <li class="last" @click="closeMenu"><a href="#skills">Навыки</a></li>
+        <div class="first" @click="closeMenu"><a href="#resume">Резюме</a></div>
+        <div @click="closeMenu"><a href="#aboutMe">О себе</a></div>
+        <div class="last" @click="closeMenu"><a href="#skills">Навыки</a></div>
 
         <button @click="closeMenu">
             <img :src="close" class="close" alt="" />
         </button>
 
         <img :src="hourglass" class="hourglass" alt="" />
-    </ul>
+    </nav>
 </template>
 
 <script setup>
@@ -32,9 +32,7 @@ const closeMenu = () => {
 </script>
 
 <style scoped lang="scss">
-// nav 
-ul {
-    //overflow-x: hidden; 
+nav {
     overflow: hidden;
     position: absolute;
     display: flex;
@@ -53,7 +51,7 @@ ul {
     padding-left: calc(40px * 100vw / 375px);
     transform: translateY(-100%);
 
-    li {
+    div {
         margin-top: calc(40px * 100vw / 375px);
         cursor: pointer;
     }
