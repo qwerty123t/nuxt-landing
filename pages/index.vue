@@ -93,6 +93,7 @@ body {
         system-ui,
         -apple-system,
         sans-serif;
+    -webkit-tap-highlight-color: transparent;
 }
 
 // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px
