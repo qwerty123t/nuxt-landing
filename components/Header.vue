@@ -38,6 +38,7 @@ header {
     display: flex;
     justify-content: space-between;
     position: relative;
+    overflow-x: hidden;
 
     .logo {
         width: calc(80px * 100vw / 375px); // 80px

@@ -25,14 +25,16 @@ const closeMenu = () => {
 
     animate(
         menu,
-        { transform: ['translateX(0)', 'translateX(100%)'] },
+        { transform: ['translateY(0)', 'translateY(-100%)'] },
         { duration: 0.3, easing: 'ease-out' },
     );
 };
 </script>
 
 <style scoped lang="scss">
+// nav 
 ul {
+    //overflow-x: hidden; 
     overflow: hidden;
     position: absolute;
     display: flex;
@@ -40,7 +42,7 @@ ul {
     background-color: #fafafa;
     width: 100%;
     height: 130vh;
-    height: 100lvh;
+    //height: 100lvh;
     z-index: 7;
     top: 0;
     left: 0;
@@ -49,7 +51,7 @@ ul {
     list-style-type: none;
     padding-top: calc(20px * 100vw / 375px);
     padding-left: calc(40px * 100vw / 375px);
-    transform: translateX(100%);
+    transform: translateY(-100%);
 
     li {
         margin-top: calc(40px * 100vw / 375px);
