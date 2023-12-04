@@ -13,6 +13,7 @@
             content="https://nuxt-landing-three.vercel.app"
         />
     </Head>
+    
     <Preloader />
     <Menu />
     <div class="container">
@@ -104,7 +105,7 @@ body {
     width: calc(335px * 100% / 375px); // = 89.33%
     max-width: 810px; // 79.16% от 1024px
     margin: 0 auto;
-    overflow-x: hidden;
+    //overflow-x: hidden;
 }
 
 @media (width >= 1025px) {

@@ -26,7 +26,7 @@ const closeMenu = () => {
     animate(
         menu,
         { transform: ['translateY(0)', 'translateY(-100%)'] },
-        { duration: 0.3, easing: 'ease-out' },
+        { duration: 0.1, easing: 'ease-out' },
     );
 };
 </script>

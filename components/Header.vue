@@ -26,7 +26,7 @@ const showMenu = () => {
 
     animate(
         menu,
-        { transform: ['translateX(100%)', 'translateX(0)'] },
+        { transform: ['translateY(-100%)', 'translateY(0)'] },
         { duration: 0.3, easing: 'ease-out' },
     );
 };
