@@ -71,7 +71,7 @@ a {
     justify-items: center;
     z-index: 5;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
+    transition: top 0s ease-in-out;
 
     .arrow {
         z-index: 6;
