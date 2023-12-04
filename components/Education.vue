@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <section id="education">
         <h2>Образование</h2>
 
         <article>
@@ -58,6 +58,25 @@
 
 <script setup>
 import line from '@/assets/images/lineEducation.svg';
+
+import { animate, scroll } from 'motion';
+
+onMounted(() => {
+    animateOnScroll();
+});
+
+const animateOnScroll = () => {
+    const education = document.getElementById('education');
+
+    scroll(
+        animate(education, {
+            transform: ['translateY(0)', 'translateY(-15vmax)'],
+            target: floatingGuy,
+            offset: ['start end', 'end end'],
+        }),
+    );
+};
+
 </script>
 
 <style scoped lang="scss">

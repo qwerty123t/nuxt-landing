@@ -134,7 +134,7 @@ const animateOnScroll = () => {
 
     scroll(
         animate(floatingGuy, {
-            transform: ['translateY(0)', 'translateY(-10vw)'],
+            transform: ['translateY(0)', 'translateY(-10vmax)'],
             target: floatingGuy,
             offset: ['start end', 'end end'],
         }),

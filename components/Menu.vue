@@ -82,4 +82,11 @@ nav {
         pointer-events: none;
     }
 }
+
+
+@media (width >= 1025px) {
+    nav {
+        display: none;
+    }
+}
 </style>

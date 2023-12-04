@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img :src="logo" class="logo" alt="logo" />
+        <img :src="logo" id="logo" class="logo" alt="logo" />
         <button class="burger" @click="showMenu">
             <div></div>
             <div></div>
@@ -18,7 +18,24 @@
 <script setup>
 import logo from '@/assets/images/logo.png';
 import line from '@/assets/images/lineHeader.svg';
-import { animate } from 'motion';
+import { animate, scroll } from 'motion';
+
+onMounted(() => {
+    animateOnScroll();
+});
+
+const animateOnScroll = () => {
+    const logo = document.getElementById('logo');
+
+    scroll(
+        animate(logo, {
+            transform: ['translateY(0)', 'translateY(-10vmax)'],
+            target: logo,
+            offset: ['start end', 'end end'],
+        }),
+    );
+};
+
 
 const showMenu = () => {
     const menu = document.getElementById('menu');

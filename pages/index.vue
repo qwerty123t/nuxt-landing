@@ -15,9 +15,9 @@
     </Head>
     
     <Preloader />
+        <!-- <ButtonTop /> -->
     <Menu />
     <div class="container">
-        <ButtonTop />
         <Header />
         <Hero />
         <ExperienceAndEducation />
@@ -37,6 +37,31 @@ import ExperienceAndEducation from '~/components/ExperienceAndEducation.vue';
 import LineAfterEducation from '~/components/LineAfterEducation.vue';
 import Skills from '~/components/Skills.vue';
 import Hands from '~/components/Hands.vue';
+import Lenis from '@studio-freight/lenis'
+
+onMounted(() => {
+    animateOnScroll();
+});
+
+
+const animateOnScroll = () => {
+const lenis = new Lenis({
+})
+
+
+lenis.on('scroll', (e) => {
+  console.log(e)
+})
+
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+requestAnimationFrame(raf)
+}
+
+
 </script>
 
 <style lang="scss">
@@ -80,7 +105,7 @@ import Hands from '~/components/Hands.vue';
 }
 
 html {
-    scroll-behavior: smooth;
+    //scroll-behavior: smooth;
     scroll-padding-top: 100px;
     overflow-x: hidden;
 }

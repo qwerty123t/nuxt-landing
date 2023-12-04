@@ -17,7 +17,7 @@ const animateOnScroll = () => {
 
     scroll(
         animate(line, {
-            transform: ['translateY(200px)', 'translateY(0)'],
+            transform: ['translateY(10vmax)', 'translateY(0)'],
             target: line,
             offset: ['start end', 'end end'],
         }),

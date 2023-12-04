@@ -1,11 +1,26 @@
 <template>
     <div>
-        <img :src="hands" alt="" class="hands" />
+        <img :src="hands" id="hands" alt="" class="hands" />
     </div>
 </template>
 
 <script setup>
 import hands from '@/assets/images/hands.png';
+import { animate, scroll } from 'motion';
+
+onMounted(() => {
+    animateOnScroll();
+});
+
+const animateOnScroll = () => {
+    const hands = document.getElementById('hands');
+
+    scroll(
+        animate(hands, {
+            transform: ['translateY(-30vmax)', 'translateY(0)'],
+        }),
+    );
+};
 </script>
 
 <style lang="scss" scoped>

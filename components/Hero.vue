@@ -1,11 +1,11 @@
 <template>
     <section id="resume">
         <div class="text">
-            <h1 contenteditable @input="updateBigText">{{ bigText }}</h1>
-            <p contenteditable @input="updateSmallText">{{ smallText }}</p>
+            <h1 contenteditable @input="updateBigText" id="bigText">{{ bigText }}</h1>
+            <p contenteditable @input="updateSmallText" id="smallText">{{ smallText }}</p>
         </div>
 
-        <address>
+        <address id="address">
             <a href="mailto:mail@gmail.com" class="first">mail@gmail.com</a>
             <a href="tel:+79990000000">+7 (999) 000-00-00</a>
             <p>г. Иннополис</p>
@@ -119,10 +119,31 @@ onMounted(() => {
 
 const animateOnScroll = () => {
     const lineBig = document.getElementById('lineBig');
+    const bigText = document.getElementById('bigText');
+    const smallText = document.getElementById('smallText');
+    const address = document.getElementById('address');
+
+    scroll(
+        animate(bigText, {
+            transform: ['translateY(0)', 'translateY(-30vmax)'],
+        }),
+    );
+        
+    scroll(
+        animate(smallText, {
+            transform: ['translateY(0)', 'translateY(-20vmax)'],
+        }),
+    );
+
+    scroll(
+        animate(address, {
+            transform: ['translateY(0)', 'translateY(-10vmax)'],
+        }),
+    );
 
     scroll(
         animate(lineBig, {
-            transform: ['translateY(0)', 'translateY(-300px)'],
+            transform: ['translateY(0)', 'translateY(-30vmax)'],
         }),
     );
 };
