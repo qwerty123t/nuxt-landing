@@ -18,7 +18,7 @@
     <Menu />
 
     <!-- <div id="wrapper" class="wrapper">  -->
-    <!-- <ButtonTop /> -->
+        <ButtonTop />
     <div id="container" class="container">
         <Header />
         <Hero />
@@ -33,7 +33,7 @@
 <script setup>
 import Preloader from '~/components/Preloader.vue';
 import Menu from '~/components/Menu.vue';
-// import ButtonTop from '~/components/ButtonTop.vue';
+import ButtonTop from '~/components/ButtonTop.vue';
 import Header from '~/components/Header.vue';
 import Hero from '~/components/Hero.vue';
 import ExperienceAndEducation from '~/components/ExperienceAndEducation.vue';
@@ -114,7 +114,8 @@ const animateOnScroll = () => {
 html {
     //scroll-behavior: smooth;
     scroll-padding-top: 100px;
-    overflow-x: hidden;
+    overflow-x: hidden; width: 100%;
+  min-height: 100%;
 }
 
 body {
@@ -127,7 +128,8 @@ body {
         system-ui,
         -apple-system,
         sans-serif;
-    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent; width: 100%;
+  min-height: 100%;
 }
 
 // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px

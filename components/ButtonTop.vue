@@ -53,6 +53,7 @@ const animateOnScroll = () => {
 <style scoped lang="scss">
 a {
     position: sticky;
+    position: fixed;
     margin-left: auto;
     top: calc(100vh - calc(80px * 100vw / 375px));
     top: calc(100lvh - calc(70px * 100vw / 375px));
@@ -127,38 +128,38 @@ a {
     }
 }
 
-@container (width > 810px) {
+@media (width > 1024px) {
     a {
-        top: calc(100vh - calc(140px * 100cqw / 1140px));
-        top: calc(100lvh - calc(140px * 100cqw / 1140px));
-        width: calc(60px * 100cqw / 1140px);
-        height: calc(60px * 100cqw / 1140px);
+        top: calc(100vh - calc(140px * 100vw / 1140px));
+        top: calc(100lvh - calc(140px * 100vw / 1140px));
+        width: calc(60px * 100vw / 1140px);
+        height: calc(60px * 100vw / 1140px);
         right: 0;
-        margin-right: calc(-132px * 100cqw / 1140px);
+        margin-right: calc(50px * 100vw / 1140px);
 
         .arrow {
-            width: calc(20px * 100cqw / 1140px);
+            width: calc(20px * 100vw / 1140px);
         }
         span {
-            font-size: calc(14px * 100cqw / 1140px);
+            font-size: calc(14px * 100vw / 1140px);
 
             .number {
                 // чтобы символ процента не прыгал при изменении ширины числа
                 display: inline-block;
-                width: calc(17px * 100cqw / 1140px);
+                width: calc(17px * 100vw / 1140px);
                 text-align: center;
             }
         }
 
         svg {
-            width: calc(60px * 100cqw / 1140px);
-            height: calc(60px * 100cqw / 1140px);
+            width: calc(60px * 100vw / 1140px);
+            height: calc(60px * 100vw / 1140px);
         }
 
         circle {
             stroke-dashoffset: 0;
-            stroke-width: calc(1px * 100cqw / 1140px);
-            r: calc(40px * 100cqw / 1140px);
+            stroke-width: calc(1px * 100vw / 1140px);
+            r: calc(40px * 100vw / 1140px);
             fill: none;
         }
     }
