@@ -5,8 +5,8 @@ export default defineNuxtConfig({
     app: {
         head: {
             htmlAttrs: {
-                lang: 'ru'
-            }
-        }
-    }
+                lang: 'ru',
+            },
+        },
+    },
 });
