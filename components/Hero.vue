@@ -1,8 +1,12 @@
 <template>
     <section id="resume">
         <div class="text">
-            <h1 contenteditable @input="updateBigText" id="bigText">{{ bigText }}</h1>
-            <p contenteditable @input="updateSmallText" id="smallText">{{ smallText }}</p>
+            <h1 id="bigText" contenteditable @input="updateBigText">
+                {{ bigText }}
+            </h1>
+            <p id="smallText" contenteditable @input="updateSmallText">
+                {{ smallText }}
+            </p>
         </div>
 
         <address id="address">
@@ -128,7 +132,7 @@ const animateOnScroll = () => {
             transform: ['translateY(0)', 'translateY(-30vmax)'],
         }),
     );
-        
+
     scroll(
         animate(smallText, {
             transform: ['translateY(0)', 'translateY(-20vmax)'],

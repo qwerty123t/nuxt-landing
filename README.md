@@ -2,7 +2,6 @@
 
 Ссылка на [сайт](https://nuxt-landing-three.vercel.app/)
 
-
 ## Библиотека анимаций [Motion One](https://motion.dev/)
 
 Плюсы Motion One:

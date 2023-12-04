@@ -13,11 +13,13 @@
             content="https://nuxt-landing-three.vercel.app"
         />
     </Head>
-    
+
     <Preloader />
-        <!-- <ButtonTop /> -->
     <Menu />
-    <div class="container">
+
+    <!-- <div id="wrapper" class="wrapper">  -->
+    <!-- <ButtonTop /> -->
+    <div id="container" class="container">
         <Header />
         <Hero />
         <ExperienceAndEducation />
@@ -25,46 +27,51 @@
         <Skills />
         <Hands />
     </div>
+    <!-- </div> -->
 </template>
 
 <script setup>
 import Preloader from '~/components/Preloader.vue';
 import Menu from '~/components/Menu.vue';
-import ButtonTop from '~/components/ButtonTop.vue';
+// import ButtonTop from '~/components/ButtonTop.vue';
 import Header from '~/components/Header.vue';
 import Hero from '~/components/Hero.vue';
 import ExperienceAndEducation from '~/components/ExperienceAndEducation.vue';
 import LineAfterEducation from '~/components/LineAfterEducation.vue';
 import Skills from '~/components/Skills.vue';
 import Hands from '~/components/Hands.vue';
-import Lenis from '@studio-freight/lenis'
+import Lenis from '@studio-freight/lenis';
 
 onMounted(() => {
     animateOnScroll();
 });
 
-
 const animateOnScroll = () => {
-const lenis = new Lenis({
-})
+    // const wrapper2 = document.getElementById('wrapper');
+    // const container = document.getElementById('container');
+    const lenis = new Lenis({
+        //wrapper: container, // element which has overflow
+        //content: wrapper2, // usually wrapper's direct child
+    });
 
+    lenis.on('scroll', (e) => {
+        console.log(e);
+    });
 
-lenis.on('scroll', (e) => {
-  console.log(e)
-})
+    function raf(time) {
+        lenis.raf(time);
+        requestAnimationFrame(raf);
+    }
 
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
-
-requestAnimationFrame(raf)
-}
-
-
+    requestAnimationFrame(raf);
+};
 </script>
 
 <style lang="scss">
+.wrapper {
+    height: 100vh;
+}
+
 // reset
 *:where(
         :not(html, iframe, canvas, img, svg, video, audio):not(

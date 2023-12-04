@@ -1,6 +1,6 @@
 <template>
     <header>
-        <img :src="logo" id="logo" class="logo" alt="logo" />
+        <img id="logo" :src="logo" class="logo" alt="logo" />
         <button class="burger" @click="showMenu">
             <div></div>
             <div></div>
@@ -35,7 +35,6 @@ const animateOnScroll = () => {
         }),
     );
 };
-
 
 const showMenu = () => {
     const menu = document.getElementById('menu');

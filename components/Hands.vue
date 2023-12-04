@@ -1,6 +1,6 @@
 <template>
     <div>
-        <img :src="hands" id="hands" alt="" class="hands" />
+        <img id="hands" :src="hands" alt="" class="hands" />
     </div>
 </template>
 

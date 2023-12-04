@@ -76,7 +76,6 @@ const animateOnScroll = () => {
         }),
     );
 };
-
 </script>
 
 <style scoped lang="scss">

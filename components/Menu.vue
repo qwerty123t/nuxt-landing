@@ -83,7 +83,6 @@ nav {
     }
 }
 
-
 @media (width >= 1025px) {
     nav {
         display: none;
