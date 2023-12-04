@@ -1,11 +1,14 @@
 # Лендинг с анимацией по скроллу на Nuxt
 
+Ссылка на [сайт](https://nuxt-landing-three.vercel.app/)
+
+
 ## Библиотека анимаций [Motion One](https://motion.dev/)
 
-Плюсы:
+Плюсы Motion One:
 
 -   всего 6kb
--   анимации работает в отдельном треде
+-   анимации работают в отдельном треде
 
 ## Container queries
 
