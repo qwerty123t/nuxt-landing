@@ -146,7 +146,7 @@ const animateOnScroll = () => {
 section {
     display: flex;
     flex-direction: column;
-    margin-top: calc(-26.5px * 100vw / 375px);
+    margin-top: calc(-22px * 100vw / 375px);
 
     h2 {
         font-size: calc(20px * 100vw / 375px);

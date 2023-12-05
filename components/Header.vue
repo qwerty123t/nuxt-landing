@@ -50,7 +50,7 @@ const showMenu = () => {
 
 <style scoped lang="scss">
 header {
-    margin: calc(-51px * 100% / 375px) auto 0; // 20px
+    margin: calc(22px * 100% / 375px) auto 0; // 20px
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -86,9 +86,10 @@ header {
 
 @container (width > 810px) {
     header {
-        margin-top: calc(40px * 100cqw / 1140px); // 100px
+        margin-top: calc(100px * 100cqw / 1140px); // 100px
         display: flex;
         justify-content: space-between;
+        overflow-x: visible;
 
         .logo {
             width: calc(150px * 100cqw / 1140px);

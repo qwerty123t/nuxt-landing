@@ -58,7 +58,7 @@ a {
     top: calc(100vh - calc(80px * 100vw / 375px));
     top: calc(100lvh - calc(70px * 100vw / 375px));
     right: 0;
-    margin-right: calc(-18px * 100vw / 375px);
+    margin-right: calc(2px * 100vw / 375px);
     width: calc(65px * 100vw / 375px);
     height: calc(65px * 100vw / 375px);
     align-self: end;
@@ -131,14 +131,14 @@ a {
 @media (width > 1024px) {
     a {
         top: calc(100vh - calc(140px * 100vw / 1140px));
-        top: calc(100lvh - calc(140px * 100vw / 1140px));
+        top: calc(100lvh - calc(117px * 100vw / 1140px));
         width: calc(60px * 100vw / 1140px);
         height: calc(60px * 100vw / 1140px);
         right: 0;
-        margin-right: calc(50px * 100vw / 1140px);
+        margin-right: calc(8px * 100vw / 1140px);
 
         .arrow {
-            width: calc(20px * 100vw / 1140px);
+            width: calc(16px * 100vw / 1140px);
         }
         span {
             font-size: calc(14px * 100vw / 1140px);
@@ -159,7 +159,7 @@ a {
         circle {
             stroke-dashoffset: 0;
             stroke-width: calc(1px * 100vw / 1140px);
-            r: calc(40px * 100vw / 1140px);
+            r: calc(25px * 100vw / 1140px);
             fill: none;
         }
     }
