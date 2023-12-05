@@ -8,9 +8,9 @@
         </button>
         <div class="menu">
             <img :src="line" class="line" alt="" />
-            <div class="first"><a href="#resume">Резюме</a></div>
-            <div><a href="#aboutMe">О себе</a></div>
-            <div class="last"><a href="#skills">Навыки</a></div>
+            <div  id="resume2" class="first"><a>Резюме</a></div>
+            <div id="aboutMe2"><a >О себе</a></div>
+            <div  id="skills2" class="last"><a>Навыки</a></div>
         </div>
     </header>
 </template>

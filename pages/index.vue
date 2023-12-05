@@ -63,11 +63,17 @@ const animateOnScroll = () => {
     const skills = document.getElementById('skills');
     const resume = document.getElementById('resume');
     const aboutMe = document.getElementById('aboutMe');
+    const skills2 = document.getElementById('skills2');
+    const resume2 = document.getElementById('resume2');
+    const aboutMe2 = document.getElementById('aboutMe2');
     const buttonTop = document.getElementById('buttonTop');
 
     skills.onclick = scrollToSkills
     resume.onclick = scrollToResume
     aboutMe.onclick = scrollToAboutMe
+    skills2.onclick = scrollToSkills
+    resume2.onclick = scrollToResume
+    aboutMe2.onclick = scrollToAboutMe
     buttonTop.onclick = scrollToTop
     
     const height = document.body.scrollHeight;
