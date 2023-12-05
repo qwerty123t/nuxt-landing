@@ -1,5 +1,5 @@
 <template>
-    <a href="#">
+    <a href="#" id="buttonTop">
         <img id="arrow" :src="arrow" alt="" class="arrow" />
         <span id="span"><span id="number" class="number">0</span>%</span>
         <svg viewBox="0 0 100 100">
