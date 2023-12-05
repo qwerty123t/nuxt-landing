@@ -17,7 +17,7 @@
     <Preloader />
     <Menu />
 
-        <ButtonTop />
+    <ButtonTop />
     <div id="container" class="container">
         <Header />
         <Hero />
@@ -45,8 +45,7 @@ onMounted(() => {
 });
 
 const animateOnScroll = () => {
-    const lenis = new Lenis({
-    });
+    const lenis = new Lenis({});
 
     // lenis.on('scroll', (e) => {
     //     console.log(e);
@@ -62,7 +61,6 @@ const animateOnScroll = () => {
 </script>
 
 <style lang="scss">
-
 // reset
 *:where(
         :not(html, iframe, canvas, img, svg, video, audio):not(
@@ -105,8 +103,9 @@ const animateOnScroll = () => {
 html {
     //scroll-behavior: smooth;
     scroll-padding-top: 100px;
-    overflow-x: hidden; width: 100%;
-  min-height: 100%;
+    overflow-x: hidden;
+    width: 100%;
+    min-height: 100%;
 }
 
 body {
@@ -119,8 +118,9 @@ body {
         system-ui,
         -apple-system,
         sans-serif;
-    -webkit-tap-highlight-color: transparent; width: 100%;
-  min-height: 100%;
+    -webkit-tap-highlight-color: transparent;
+    width: 100%;
+    min-height: 100%;
 }
 
 // В макете контейнер обладает шириной 1140px. А весь макет шириной 1440px

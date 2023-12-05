@@ -52,7 +52,7 @@
             </p>
         </article>
 
-        <img :src="line" id="lineEductation" alt="" />
+        <img id="lineEductation" :src="line" alt="" />
     </section>
 </template>
 
@@ -69,7 +69,9 @@ const animateOnScroll = () => {
     const education = document.getElementById('education');
     const lineEductation = document.getElementById('lineEductation');
 
-    const itsASmartphone = window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
+    const itsASmartphone = window.matchMedia(
+        '(max-width: 700px) and (orientation: portrait)',
+    ).matches;
 
     if (itsASmartphone) {
         scroll(
@@ -79,22 +81,22 @@ const animateOnScroll = () => {
                 offset: ['start end', 'end end'],
             }),
         );
-        } else {
-            scroll(
-        animate(lineEductation, {
-            transform: ['translateY(0)', 'translateY(-15vmax)'],
-            target: lineEductation,
-            offset: ['start end', 'end end'],
-        }),
-    );
-        }
+    } else {
         scroll(
+            animate(lineEductation, {
+                transform: ['translateY(0)', 'translateY(-15vmax)'],
+                target: lineEductation,
+                offset: ['start end', 'end end'],
+            }),
+        );
+    }
+    scroll(
         animate(education, {
             transform: ['translateY(0)', 'translateY(-15vmax)'],
             target: education,
             offset: ['start end', 'end end'],
         }),
-        )
+    );
 };
 </script>
 

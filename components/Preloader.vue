@@ -47,27 +47,29 @@ const animatePreloader = (decodeTime) => {
         maximumAnimationTime,
     );
     const durationInSeconds = fromMillisecondsToSeconds(animationDuration);
-    const itsASmartphone = window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
+    const itsASmartphone = window.matchMedia(
+        '(max-width: 700px) and (orientation: portrait)',
+    ).matches;
 
-if (itsASmartphone) {
-    animate(
-        '#rocket',
-        { transform: 'translate(calc(100vw + 100%), calc(-200%))' },
-        {
-            duration: durationInSeconds,
-            easing: 'ease-in-out',
-        },
-    );
-} else {
-    animate(
-        '#rocket',
-        { transform: 'translate(calc(100vw + 100%), calc(-100vh - 100%))' },
-        {
-            duration: durationInSeconds,
-            easing: 'ease-in-out',
-        },
-    );
-}
+    if (itsASmartphone) {
+        animate(
+            '#rocket',
+            { transform: 'translate(calc(100vw + 100%), calc(-200%))' },
+            {
+                duration: durationInSeconds,
+                easing: 'ease-in-out',
+            },
+        );
+    } else {
+        animate(
+            '#rocket',
+            { transform: 'translate(calc(100vw + 100%), calc(-100vh - 100%))' },
+            {
+                duration: durationInSeconds,
+                easing: 'ease-in-out',
+            },
+        );
+    }
 
     animate(
         '#bg',
@@ -118,7 +120,7 @@ div {
     div {
         img {
             rotate: unset;
-        margin-bottom: calc(-591px * 100% / 1440px);
+            margin-bottom: calc(-591px * 100% / 1440px);
         }
     }
 }

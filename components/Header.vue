@@ -21,9 +21,11 @@ import logo from '@/assets/images/logo.png';
 import line from '@/assets/images/lineHeader.svg';
 
 onMounted(() => {
-    const translateYForSmartphones = ['translateY(0)', 'translateY(-100vmax)']
-    const translateYForPC = ['translateY(0)', 'translateY(-40vmax)']
-    const itsASmartphone = window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
+    const translateYForSmartphones = ['translateY(0)', 'translateY(-100vmax)'];
+    const translateYForPC = ['translateY(0)', 'translateY(-40vmax)'];
+    const itsASmartphone = window.matchMedia(
+        '(max-width: 700px) and (orientation: portrait)',
+    ).matches;
 
     if (itsASmartphone) {
         animateOnScroll(translateYForSmartphones);
@@ -32,11 +34,9 @@ onMounted(() => {
     }
 });
 
-
-
 const animateOnScroll = (distance) => {
     const logo = document.getElementById('logo');
-    
+
     scroll(
         animate(logo, {
             transform: distance,

@@ -165,7 +165,6 @@ a {
     }
 }
 
-
 @media (width > 1600px) {
     a {
         margin-right: calc(30px * 100vw / 1140px);

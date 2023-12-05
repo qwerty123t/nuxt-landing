@@ -126,30 +126,44 @@ const animateOnScroll = () => {
     const bigText = document.getElementById('bigText');
     const smallText = document.getElementById('smallText');
     const address = document.getElementById('address');
-    const itsASmartphone = window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
-    const multiplier = itsASmartphone? 3 : 1;
+    const itsASmartphone = window.matchMedia(
+        '(max-width: 700px) and (orientation: portrait)',
+    ).matches;
+    const multiplier = itsASmartphone ? 3 : 1;
 
     scroll(
         animate(bigText, {
-            transform: ['translateY(0)', `translateY(calc(-30vmax * ${multiplier}))`],
+            transform: [
+                'translateY(0)',
+                `translateY(calc(-30vmax * ${multiplier}))`,
+            ],
         }),
     );
 
     scroll(
         animate(smallText, {
-            transform: ['translateY(0)', `translateY(calc(-20vmax * ${multiplier}))`],
+            transform: [
+                'translateY(0)',
+                `translateY(calc(-20vmax * ${multiplier}))`,
+            ],
         }),
     );
 
     scroll(
         animate(address, {
-            transform: ['translateY(0)', `translateY(calc(-10vmax * ${multiplier}))`],
+            transform: [
+                'translateY(0)',
+                `translateY(calc(-10vmax * ${multiplier}))`,
+            ],
         }),
     );
 
     scroll(
         animate(lineBig, {
-            transform: ['translateY(0)', `translateY(calc(-30vmax * ${multiplier}))`],
+            transform: [
+                'translateY(0)',
+                `translateY(calc(-30vmax * ${multiplier}))`,
+            ],
         }),
     );
 };
