@@ -1,9 +1,9 @@
 <template>
     <nav id="menu">
         <img :src="line" class="line" alt="" />
-        <div class="first" id="resume" @click="closeMenu"><a>Резюме</a></div>
-        <div @click="closeMenu" id="aboutMe"><a>О себе</a></div>
-        <div class="last" id="skills" @click="closeMenu"><a>Навыки</a></div>
+        <div id="resume" class="first" @click="closeMenu"><a>Резюме</a></div>
+        <div id="aboutMe" @click="closeMenu"><a>О себе</a></div>
+        <div id="skills" class="last" @click="closeMenu"><a>Навыки</a></div>
 
         <button @click="closeMenu">
             <img :src="close" class="close" alt="" />
