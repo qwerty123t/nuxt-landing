@@ -45,8 +45,6 @@ onMounted(() => {
 });
 
 const animateOnScroll = () => {
-
-
     const lenis = new Lenis({});
 
     // lenis.on('scroll', (e) => {
@@ -68,24 +66,24 @@ const animateOnScroll = () => {
     const aboutMe2 = document.getElementById('aboutMe2');
     const buttonTop = document.getElementById('buttonTop');
 
-    skills.onclick = scrollToSkills
-    resume.onclick = scrollToResume
-    aboutMe.onclick = scrollToAboutMe
-    skills2.onclick = scrollToSkills
-    resume2.onclick = scrollToResume
-    aboutMe2.onclick = scrollToAboutMe
-    buttonTop.onclick = scrollToTop
-    
+    skills.onclick = scrollToSkills;
+    resume.onclick = scrollToResume;
+    aboutMe.onclick = scrollToAboutMe;
+    skills2.onclick = scrollToSkills;
+    resume2.onclick = scrollToResume;
+    aboutMe2.onclick = scrollToAboutMe;
+    buttonTop.onclick = scrollToTop;
+
     const height = document.body.scrollHeight;
 
     function scrollToSkills() {
         lenis.scrollTo(height * 0.9);
     }
-    
+
     function scrollToResume() {
         lenis.scrollTo(height * 0.1);
     }
-    
+
     function scrollToAboutMe() {
         lenis.scrollTo(height * 0.5);
     }
@@ -93,7 +91,6 @@ const animateOnScroll = () => {
     function scrollToTop() {
         lenis.scrollTo(0);
     }
-    
 };
 </script>
 
