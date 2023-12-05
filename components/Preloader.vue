@@ -36,7 +36,6 @@ const loadImage = () => {
 const handleImageDecode = () => {
     const endTime = performance.now();
     const decodeTime = (endTime - startTime).toFixed(0);
-    console.log(`Изображение декодировано за ${decodeTime} миллисекунд`);
     animatePreloader(decodeTime);
 };
 
