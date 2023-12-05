@@ -127,7 +127,7 @@ const animateOnScroll = () => {
     const smallText = document.getElementById('smallText');
     const address = document.getElementById('address');
     const itsASmartphone = window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
-    let multiplier = itsASmartphone? 3 : 1;
+    const multiplier = itsASmartphone? 3 : 1;
 
     scroll(
         animate(bigText, {

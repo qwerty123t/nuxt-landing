@@ -47,8 +47,18 @@ const animatePreloader = (decodeTime) => {
         maximumAnimationTime,
     );
     const durationInSeconds = fromMillisecondsToSeconds(animationDuration);
+    const itsASmartphone = window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
 
-    console.log(animationDuration);
+if (itsASmartphone) {
+    animate(
+        '#rocket',
+        { transform: 'translate(calc(100vw + 100%), calc(-200%))' },
+        {
+            duration: durationInSeconds,
+            easing: 'ease-in-out',
+        },
+    );
+} else {
     animate(
         '#rocket',
         { transform: 'translate(calc(100vw + 100%), calc(-100vh - 100%))' },
@@ -57,6 +67,8 @@ const animatePreloader = (decodeTime) => {
             easing: 'ease-in-out',
         },
     );
+}
+
     animate(
         '#bg',
         {
@@ -97,7 +109,7 @@ div {
         width: calc(591px * 100% / 1440px);
         aspect-ratio: 1;
         margin-left: calc(-591px * 100% / 1440px);
-        margin-bottom: calc(-591px * 100% / 1440px);
+        margin-bottom: calc(200px * 100% / 1440px);
         rotate: -5deg;
     }
 }
@@ -106,6 +118,7 @@ div {
     div {
         img {
             rotate: unset;
+        margin-bottom: calc(-591px * 100% / 1440px);
         }
     }
 }
