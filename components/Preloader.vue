@@ -53,7 +53,7 @@ const animatePreloader = (decodeTime) => {
     if (itsASmartphone) {
         animate(
             '#rocket',
-            { transform: 'translate(calc(100vw + 100%), calc(-200%))' },
+            { transform: 'translate(calc(120vw + 100%), calc(-200%))' },
             {
                 duration: durationInSeconds,
                 easing: 'ease-in-out',
@@ -62,7 +62,7 @@ const animatePreloader = (decodeTime) => {
     } else {
         animate(
             '#rocket',
-            { transform: 'translate(calc(100vw + 100%), calc(-100vh - 100%))' },
+            { transform: 'translate(calc(110vw + 100%), calc(-100vh - 100%))' },
             {
                 duration: durationInSeconds,
                 easing: 'ease-in-out',
