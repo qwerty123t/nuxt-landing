@@ -16,20 +16,30 @@
 </template>
 
 <script setup>
+import { animate, scroll } from 'motion';
 import logo from '@/assets/images/logo.png';
 import line from '@/assets/images/lineHeader.svg';
-import { animate, scroll } from 'motion';
 
 onMounted(() => {
-    animateOnScroll();
+    const translateYForSmartphones = ['translateY(0)', 'translateY(-100vmax)']
+    const translateYForPC = ['translateY(0)', 'translateY(-40vmax)']
+    const itsASmartphone = window.matchMedia('(max-width: 700px) and (orientation: portrait)').matches;
+
+    if (itsASmartphone) {
+        animateOnScroll(translateYForSmartphones);
+    } else {
+        animateOnScroll(translateYForPC);
+    }
 });
 
-const animateOnScroll = () => {
-    const logo = document.getElementById('logo');
 
+
+const animateOnScroll = (distance) => {
+    const logo = document.getElementById('logo');
+    
     scroll(
         animate(logo, {
-            transform: ['translateY(0)', 'translateY(-10vmax)'],
+            transform: distance,
             target: logo,
             offset: ['start end', 'end end'],
         }),

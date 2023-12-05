@@ -17,7 +17,6 @@
     <Preloader />
     <Menu />
 
-    <!-- <div id="wrapper" class="wrapper">  -->
         <ButtonTop />
     <div id="container" class="container">
         <Header />
@@ -27,7 +26,6 @@
         <Skills />
         <Hands />
     </div>
-    <!-- </div> -->
 </template>
 
 <script setup>
@@ -47,16 +45,12 @@ onMounted(() => {
 });
 
 const animateOnScroll = () => {
-    // const wrapper2 = document.getElementById('wrapper');
-    // const container = document.getElementById('container');
     const lenis = new Lenis({
-        //wrapper: container, // element which has overflow
-        //content: wrapper2, // usually wrapper's direct child
     });
 
-    lenis.on('scroll', (e) => {
-        console.log(e);
-    });
+    // lenis.on('scroll', (e) => {
+    //     console.log(e);
+    // });
 
     function raf(time) {
         lenis.raf(time);
@@ -68,9 +62,6 @@ const animateOnScroll = () => {
 </script>
 
 <style lang="scss">
-.wrapper {
-    height: 100vh;
-}
 
 // reset
 *:where(

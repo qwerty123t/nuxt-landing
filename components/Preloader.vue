@@ -10,9 +10,9 @@ import { animate } from 'motion';
 import rocket from '@/assets/images/preloader.png';
 
 let startTime;
-const minimalAnimationTime = 700; // в миллисекундах
+const minimalAnimationTime = 1000; // в миллисекундах
 const maximumAnimationTime = 2000;
-const multiplier = 20;
+const multiplier = 25;
 
 onMounted(() => {
     loadImage();
@@ -54,7 +54,7 @@ const animatePreloader = (decodeTime) => {
         { transform: 'translate(calc(100vw + 100%), calc(-100vh - 100%))' },
         {
             duration: durationInSeconds,
-            easing: 'ease-in',
+            easing: 'ease-in-out',
         },
     );
     animate(
